@@ -1,0 +1,50 @@
+od -N 800000 -e /dev/urandom > floatn
+//create 200,000 random double-precision floating point numbers
+sed 's/^.\{8\}//g' floatn > float
+//take out the first 8 characters in each line
+//these arent' the numbers we want
+tr -cs '0-9e.+-' '[\n*]' < float > floatn
+//for every character that isnt important; replace it with a \n 
+rm float
+//remove the file that was used as an intermediate
+
+bash
+export LC_ALL='POSIX'
+locale
+//change to POSIX 
+
+/usr/bin/time -p /usr/local/cs/bin/sort -g floatn > /dev/null
+//time a regular sort
+
+real 1.75
+user 1.74
+sys 0.00
+
+/usr/bin/time -p /usr/local/cs/bin/sort -g --parallel=1 floatn 
+> /dev/null
+
+real 1.74
+user 1.74
+sys 0.00
+
+/usr/bin/time -p /usr/local/cs/bin/sort -g --parallel=2 floatn
+> /dev/null
+
+real 1.75
+user 1.74
+sys 0.00
+
+/usr/bin/time -p /usr/local/cs/bin/sort -g -parallel=4 floatn
+> /dev/null
+
+real 1.75
+user 1.74
+sys 0.00
+
+/usr/bin/time -p /usr/local/cs/bin/sort -g -parallel=8 floatn
+> /dev/null
+
+real 1.75
+user 1.75
+sys 0.00
+

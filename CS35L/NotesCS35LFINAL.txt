@@ -1,0 +1,233 @@
+File Commands
+
+pwd : show current directory 
+rm -rf : force remove directory  
+cp -r dir1 dir : copy directory
+mv file1 file2 : rename or move file1 to file2 
+ln -s file link : create symbolic link link to file
+touch file : create or update file 
+cat > file : places standard input into file 
+more file : output the contents of file  
+head file : output the first 10 lines of file 
+
+Process Management
+
+ps : display your currently active processes
+top : display all running processes
+kill pid : kill process id pid
+
+chmod
+1
+2
+4
+
+ugo=a = user, group others, a = everyone
+
+ssh user@host : connect to host as user
+ssh -p port user@host : connect to host on port port as user
+ssh-copy-id user@host - add your key to host for user to enable a keyed or passwordless login
+
+grep pattern files : search for pattern in files
+grep -r pattern dir : search recursively for pattern in dir
+command | grep pattern : search for pattern in the output of command
+locate file : find all instances of file
+
+w : display who is online
+whoami : who you are logged in as
+finger user : display information about user
+man command : show the manual for command
+whereis app : show possible locations of app
+which app : show which app will be run by default
+
+tar cf file.tar files : create a tar named file.tar containing files
+tar xf files.tar : extract the files from file.tar
+tar czf file.tar.gz files : create a tar with Gzip compression
+tar xzf file.tar.gz : extract a tar using Gzip
+
+wget file : download file
+./configure
+make 
+make install
+
+sed 's/string1/string2/g'	Replace string1 with string2
+sed 's/\(.*\)1/\12/g'	        Modify anystring1 to anystring2
+sed '/ *#/d; /^ *$/d'	        Remove comments and blank lines
+sed ':a; /\\$/N; s/\\\n//; ta'	Concatenate lines with trailing \
+sed 's/[ \t]*$//'	        Remove trailing spaces from lines
+sed 's/\([`"$\]\)/\\\1/g'	Escape shell metacharacters active within double quotes
+seq 10 | sed "s/^/      /; s/ *\(.\{7,\}\)/\1/"	Right align numbers
+sed -n '1000{p;q}'	                        Print 1000th line
+sed -n '10,20p;20q'	                        Print lines 10 to 20
+sed -n 's/.*<title>\(.*\)<\/title>.*/\1/ip;T;q'	Extract title from HTML web page
+sed -i 42d ~/.ssh/known_hosts	                Delete a particular line
+
+tr -c 'A-Za-z' '[\n*]' <original.txt > Example_1.txt
+//replaces anything that is not an alphabetical character with a new line
+
+tr -cs 'A-Za-z' '[\n*] 
+//replaces any non alphabetical character with a new line; if repeated; it is deleted
+
+sed "y/ABC/abc/"
+//replaces A with a, B with b, and C with c.
+sed "s/"\`"/'/g"
+//replaces ` with '
+sed 's/^.\{8\{//g'
+//takes out the first characters in each line
+
+
+Bash Script
+
+#!/bin/bash #location of bash
+
+STR="Hello World!" #assign Hello World to variable STR
+echo $STR #echo the content of STR; need $
+
+if ["foo" = "foo"]; then
+	echo expression evaluated as true
+fi
+
+COUNTER=0
+while [ $COUNTER -lt 10 ]; do
+	echo The counter is $COUNTER
+	let COUNTER=COUNTER+1
+done
+
+function quit {
+	exit
+}
+function e {
+	echo $1
+}
+e Hello
+e World
+quit
+
+$? = return value
+
+local variables can be created by using the keyword local
+
+example code
+
+#!/bin/bash
+
+i=0
+for f in $(find $1 -maxdepth 1 -type f | sort)  
+do
+	flag=1
+	echo $f
+	for j in ${files[*]}
+	do
+		if cmp $j $f;
+		then
+			echo same
+			ln -f $f $j
+			let flag=0
+		fi
+	done
+	if [ "$flag" == "1" ]
+	then
+		echo "hihi $f"
+		files[$i]=$f
+		i=$(($i+1))
+	fi	
+done
+
+
+the public key is used to encrypt and the private key is used to decrypt.
+
+Digital Signature
+Data is signed by using a hash function; it has a hash -> encrypt the hash using
+the signer's private key then attach it to the data.
+data is sent; needs to be verified; data is sent through hash function to get a
+hash; then the hash is decrypted using the signer's public key; if the hash are
+the sname the signature is valid.
+
+top of stack
+stack pointer ------------------ 
+		local variables
+		return address
+frame pointer  ----------------
+		parameter
+		saved temp values
+
+PARALLEL
+-----------------------------------
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define NUM_THREADS	8
+
+char *messages[NUM_THREADS];
+
+struct thread_data
+{
+   int	thread_id;
+   int  sum;
+   char *message;
+};
+
+struct thread_data thread_data_array[NUM_THREADS];
+
+void *PrintHello(void *threadarg)
+{
+   int taskid, sum;
+   char *hello_msg;
+   struct thread_data *my_data;
+
+   sleep(1);
+   my_data = (struct thread_data *) threadarg;
+   taskid = my_data->thread_id;
+   sum = my_data->sum;
+   hello_msg = my_data->message;
+   printf("Thread %d: %s  Sum=%d\n", taskid, hello_msg, sum);
+   pthread_exit(NULL);
+}
+
+int main(int argc, char *argv[])
+{
+pthread_t threads[NUM_THREADS];
+int *taskids[NUM_THREADS];
+int rc, t, sum;
+
+sum=0;
+messages[0] = "English: Hello World!";
+messages[1] = "French: Bonjour, le monde!";
+messages[2] = "Spanish: Hola al mundo";
+messages[3] = "Klingon: Nuq neH!";
+messages[4] = "German: Guten Tag, Welt!"; 
+messages[5] = "Russian: Zdravstvytye, mir!";
+messages[6] = "Japan: Sekai e konnichiwa!";
+messages[7] = "Latin: Orbis, te saluto!";
+
+for(t=0;t<NUM_THREADS;t++) {
+  sum = sum + t;
+  thread_data_array[t].thread_id = t;
+  thread_data_array[t].sum = sum;
+  thread_data_array[t].message = messages[t];
+  printf("Creating thread %d\n", t);
+  rc = pthread_create(&threads[t], NULL, PrintHello, (void *) 
+       &thread_data_array[t]);
+  if (rc) {
+    printf("ERROR; return code from pthread_create() is %d\n", rc);
+    exit(-1);
+    }
+  }
+pthread_exit(NULL);
+}
+
+svnadmin create /home/usr/svnroot
+svn import /home/usr/project file:///home/usr/svnroot/project/trunk -m "Initial Import"
+svn checkout file:///home/usr/svnroot/project/trunk/project_name
+svn list --verbose file:///home/usr/svnroot/project/trunk
+svn add filename or dirname or dirname/filename //file or directories should be inside the repository(trunk)
+svn delete filename/direname 
+svn status
+svn commit -m "Saving recent changes" file://home/usr/svnroot/project/trunk
+svn update
+
+svn diff filename
+svn diff -r rev1:rev2 filename
+svn diff filename > patchfile
+svn diff > patchfile
+
+

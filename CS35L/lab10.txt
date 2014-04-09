@@ -1,0 +1,45 @@
+Title: New Programming language to plug information leaks in software
+University of Gothenburg(Sweden) (11/23/11)
+
+address: http://www.alphagalileo.org/ViewItem.aspx?ItemId=114767&CultureCode=en
+
+	This article introduces a new language that is designed to identify 
+potential information leaks while the program is being written called Paragon.
+The current method to prevent leaks in software is to have code reviewers
+manually check for potential weaknesses. The most common causes of security
+issues in today's software are the result of imperfect written software that
+contains information leaks. This language tackles this problem by identifying
+leaks during compilation and allowing the programmer to fix the problems. 
+	Niklas Broberg is the developer of Paragon. It is an extension of 
+Java and has been designed to be easily used. Its main strength is to 
+automatically identify potential information leaks while the program is being
+developed. The methodology of Paragon is presented in his thesis, "Practical, 
+Flexible Programming with Information Flow Control" written in August 2011.
+This thesis discuses how information security isn't adequate. It discusses
+how most of the vulnerabilities do not arise from the deficiencies in 
+network security or encryption mechanisms, but from software that fails to 
+provide adequate protection. Programs are not prevented from revealing too
+much information to the people who interact with the program. To counteract
+this problem; he provides Paralocks and Paragon. 
+	The method Paragon uses has a two stage security process. The first
+stage specifies how information in the software may be used, who should have
+access to it and under what conditions. Stage two takes place during 
+compilation, where the program is analyzed to see if it has a risk for
+sensitive information being leaked or manipulated. If the compiler finds a
+risk of leak, it will report an error, enabling the programmer to resolve
+the issue immediately.
+	My initial reaction about Paragon was that i was interested in how
+a language could track potential leaks and report the error to the programmer
+to fix. It then made me think of other possible applications related to 
+learning. Because I learn best from my mistakes, I immediately thought of 
+another application of the language that the article did not discuss. It could
+easily be used as a teaching tool to teach what not to do because it would
+introduce an information leak. 
+	I believe that Paragon will be a good tool for not just to check for
+possible leaks but also as a teaching tool. Because it reports after
+compilation about errors in leak, the programmer can learn from his mistakes
+in his coding that introduced the leak and fix that implementation. It can
+teach programmers common ways that leak information because of faulty 
+implementation. The programmer can then program in other languages that
+Paragon does not support and write better code that doesnt' introduce
+information leaks that they learned their faulty implementation introduced.
