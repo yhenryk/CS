@@ -1,0 +1,38 @@
+Lab 1A: 
+
+Henry Yu UID: 303889334
+
+Implementation:
+
+The function make_command_stream parses a character
+stream and converts it into a token stream. This
+token stream holds values for distinct tokens (e.g
+command type or a char string). This token stream is
+then used to create a tree of commands through 
+recursion, with precedence of:
+1. AND and OR commands
+2. Sequence and PIPE commands
+3. SUBSHELL commands
+4. Simple Commands
+
+There are auxillary functions that are implemented
+to successfully connect I/O redirections and SIMPLE
+commands with more than one word. 
+
+The function read_command_stream runs, and checks
+to see if the root of command is been read. If it
+has not, it returns the root of command, otherwise
+it will traverse to the next pointer until it
+has read all the roots. It then returns NULL, ending
+the loop inside main.
+
+The implementation required to construct the tree
+could be doen in various ways, such as a linked list or
+and array. For my implementation, I chose to use an
+array.
+
+Issues:
+
+The code is unable to free word inside SIMPLE commands.
+Therefore there are still memory leaks. 
+
