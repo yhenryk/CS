@@ -1,0 +1,18 @@
+#ifndef __LEASY_WAVELET_3D_SHORT_H
+#define __LEASY_WAVELET_3D_SHORT_H
+
+void wavelet_init_3d_short(int width, int height, int depth);
+void wavelet_close_3d_short();
+
+void wavelet_forward_3d_short(signed short *x);
+void wavelet_inverse_3d_short(signed short *x);
+
+// Copy fragment of coefficients in consistent way, allowing farther wavelet_inverse_2d to succeed
+// fragment 0 -> all coefficients, similar to memcpy
+// fragment 1 -> 1 / 8 coeffecients
+// fragment 2 -> 1 / 64 coefficients
+// It is safe to pass-in NULL parameters - they are skipped
+void wavelet_copy_fragment_3d_short(signed short *source, signed short *target, int fragment, int *fragment_width, int *fragment_height, int *fragment_depth);
+void wavelet_paste_fragment_3d_short(signed short *source, signed short *target, int fragment, int *fragment_width, int *fragment_height, int *fragment_depth);
+
+#endif	// __LEASY_WAVELET_3D_SHORT_H

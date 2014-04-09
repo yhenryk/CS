@@ -1,0 +1,157 @@
+// Leasy (linear prediction) Wavelet Transform with Lifting
+// Author: Arkadi Kagan
+//
+// This code strictly follows recipe from:
+// Ingrid Doubaches and Wim Sweldens, "Factoring Wavelet Transform into Lifting Steps",
+// Journal of Fourier Analysis and Applications, Volume 4, Number 3, May 1998, pages 247-269,
+// DOI: 10.1007/BF02476026
+//
+// The simplified process of Fast Discrete Wavelet Transform can be reformulated as follow:
+// * Split the source sequence into odd and even members.
+// * Predict odd members by corresponding values of the surrounding even members.
+//   In our case, we compute mean x[i - 1] and x[i + 1].
+//   We store delta = x[i] - Predicted(x[i]) as a coefficient.
+// * Update the even members to restore the mean value to be equal to the overall mean value.
+//   In our case we add (delta[i - 1] + delta[i + 1]) / 4 to each even member.
+// After this process is completted, we have a set of updated original values (even members)
+// and a separate set of coefficients to be stored. The updated original values are farther
+// processed in recursion.
+//
+// The defined above method computes Leasy (linear prediction) Wavelet Transform. In this project
+// we do not attempt to create general code that fit all possible Wavelet Transforms. Instead,
+// our aim is to create a single efficient implementation that can be used as an auxiliary
+// tool for other tasks.
+//
+
+#include "leasy_wavelet.h"
+#include <math.h>
+#include <stdlib.h>
+#include <memory.h>
+
+#define DIV_2_ROUND_UP(x) (((int)(x)) / 2 + ((int)(x)) % 2)
+
+static int *sub_lengths = NULL;
+static int count_subs = 0;
+static double *split_buffer = NULL;
+static int length;
+
+static void split(double *x, int length)
+{
+	int i, j;
+	for (i = 0, j = 0; i < length; i += 2, j++)
+		split_buffer[j] = x[i];
+	for (i = 1; i < length; i += 2, j++)
+		split_buffer[j] = x[i];
+	memcpy(x, split_buffer, sizeof(double) * length);
+}
+static void merge(double *x, int length)
+{
+	int i, j;
+	for (i = 0, j = 0; i < length; i += 2, j++)
+		split_buffer[i] = x[j];
+	for (i = 1; i < length; i += 2, j++)
+		split_buffer[i] = x[j];
+	memcpy(x, split_buffer, sizeof(double) * length);
+}
+
+static void predict_odd(double *x, int length)
+{
+	int i;
+	for (i = 1; i < length; i += 2)
+	{
+		if (i < length - 1)
+			x[i] -= (x[i - 1] + x[i + 1]) / 2;
+		else
+			x[i] -= x[i - 1];
+	}
+}
+
+static void update_even(double *x, int length)
+{
+	int i;
+	for (i = 0; i < length; i += 2)
+	{
+		if (i > 0 && i < length - 1)
+			x[i] += (x[i - 1] + x[i + 1]) / 4;
+		else if (i > 0)
+			x[i] += x[i - 1] / 2;
+		else if (i < length - 1)
+			x[i] += x[i + 1] / 2;
+	}
+}
+
+static void restore_even(double *x, int length)
+{
+	int i;
+	for (i = 0; i < length; i += 2)
+	{
+		if (i > 0 && i < length - 1)
+			x[i] -= (x[i - 1] + x[i + 1]) / 4;
+		else if (i > 0)
+			x[i] -= x[i - 1] / 2;
+		else if (i < length - 1)
+			x[i] -= x[i + 1] / 2;
+	}
+}
+
+static void restore_odd(double *x, int length)
+{
+	int i;
+	for (i = 1; i < length; i += 2)
+	{
+		if (i < length - 1)
+			x[i] += (x[i - 1] + x[i + 1]) / 2;
+		else
+			x[i] += x[i - 1];
+	}
+}
+
+void wavelet_forward(double *x)
+{
+	int i;
+	for (i = length; i > 1; i = DIV_2_ROUND_UP(i))
+	{
+		predict_odd(x, i);
+		update_even(x, i);
+		split(x, i);
+	}
+}
+
+void wavelet_inverse(double *x)
+{
+	int i;
+	for (i = count_subs - 1; i >= 0; i--)
+	{
+		merge(x, sub_lengths[i]);
+		restore_even(x, sub_lengths[i]);
+		restore_odd(x, sub_lengths[i]);
+	}
+}
+
+void wavelet_copy_fragment(double *x, double *target, int fragment, int *fragment_length)
+{
+	if (fragment_length != NULL)
+		*fragment_length = sub_lengths[fragment];
+	if (target != NULL && x != NULL)
+		memcpy(target, x, sizeof(double) * sub_lengths[fragment]);
+}
+
+void wavelet_init(int a_length)
+{
+	int i;
+	length = a_length;
+
+	// In case of length power of two, fill array with power of two values descending from length.
+	// In all other cases this sequence is not trivial.
+	sub_lengths = (int*)malloc(sizeof(int) * (int)(1 + log(length) / log(2)));
+	for (i = length; i > 1; i = DIV_2_ROUND_UP(i))
+		sub_lengths[count_subs++] = i;
+
+	split_buffer = (double*)malloc(sizeof(double) * length);
+}
+void wavelet_close()
+{
+	count_subs = 0;
+	free(sub_lengths);
+	free(split_buffer);
+}

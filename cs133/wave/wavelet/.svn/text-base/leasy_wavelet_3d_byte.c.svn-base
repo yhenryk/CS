@@ -1,0 +1,239 @@
+// Leasy (linear prediction) Wavelet Transform with Lifting
+// Author: Arkadi Kagan
+//
+// This code strictly follows recipe from:
+// Ingrid Doubaches and Wim Sweldens, "Factoring Wavelet Transform into Lifting Steps",
+// Journal of Fourier Analysis and Applications, Volume 4, Number 3, May 1998, pages 247-269,
+// DOI: 10.1007/BF02476026
+//
+// In this module we define a 2-D Discrete Wavelet Transform implemented by
+// pyramid decomposition. The pyramid decomposition is defined in
+// David Salomon, "Data Compression: The Complete Reference, Fourth Edition", section 5.6.1, p. 20
+// Here is a quotation:
+// "The latter method computes the wavelet transform of the image by alternating between rows and columns. The first step is
+//  to calculate averages and differences for all the rows (just one iteration, not the entire wavelet transform). This creates
+//  averages in the left half of the image and differences in the right half. The second step is to calculate averages and
+//  differences (just one iteration) for all the columns, which results in averages in the top-left quadrant of the image and
+//  differences elsewhere."
+//
+
+#include "leasy_wavelet_3d_byte.h"
+#include <math.h>
+#include <stdlib.h>
+#include <memory.h>
+
+#define DIV_2_ROUND_UP(x) (((int)(x)) / 2 + ((int)(x)) % 2)
+
+static int *sub_lengths_x = NULL, *sub_lengths_y = NULL, *sub_lengths_z = NULL;
+static int count_subs = 0;
+static signed char *split_buffer = NULL;
+static int width, height, depth;
+
+static void split(signed char *x, int length, int gap)
+{
+	int i, j;
+	for (i = 0, j = 0; i < length * gap; i += 2 * gap, j++)
+		split_buffer[j] = x[i];
+	for (i = gap; i < length * gap; i += 2 * gap, j++)
+		split_buffer[j] = x[i];
+	for (i = 0, j = 0; i < length; i++, j += gap)
+		x[j] = split_buffer[i];
+}
+static void merge(signed char *x, int length, int gap)
+{
+	int i, j;
+	for (i = 0, j = 0; i < length; i += 2, j += gap)
+		split_buffer[i] = x[j];
+	for (i = 1; i < length; i += 2, j += gap)
+		split_buffer[i] = x[j];
+	for (i = 0, j = 0; i < length; i++, j += gap)
+		x[j] = split_buffer[i];
+}
+
+static void predict_odd(signed char *x, int length, int gap)
+{
+	int i;
+	for (i = 1; i < length; i += 2)
+	{
+		if (i < length - 1)
+			x[i * gap] -= (x[(i - 1) * gap] + x[(i + 1) * gap]) / 2;
+		else
+			x[i * gap] -= x[(i - 1) * gap];
+	}
+}
+
+static void update_even(signed char *x, int length, int gap)
+{
+	int i;
+	for (i = 0; i < length; i += 2)
+	{
+		if (i > 0 && i < length - 1)
+			x[i * gap] += (x[(i - 1) * gap] + x[(i + 1) * gap]) / 4;
+		else if (i > 0)
+			x[i * gap] += x[(i - 1) * gap] / 2;
+		else if (i < length - 1)
+			x[i * gap] += x[(i + 1) * gap] / 2;
+	}
+}
+
+// Reverse of update_even
+static void restore_even(signed char *x, int length, int gap)
+{
+	int i;
+	for (i = 0; i < length; i += 2)
+	{
+		if (i > 0 && i < length - 1)
+			x[i * gap] -= (x[(i - 1) * gap] + x[(i + 1) * gap]) / 4;
+		else if (i > 0)
+			x[i * gap] -= x[(i - 1) * gap] / 2;
+		else if (i < length - 1)
+			x[i * gap] -= x[(i + 1) * gap] / 2;
+	}
+}
+
+// Reverse of predict_odd
+static void restore_odd(signed char *x, int length, int gap)
+{
+	int i;
+	for (i = 1; i < length; i += 2)
+	{
+		if (i < length - 1)
+			x[i * gap] += (x[(i - 1) * gap] + x[(i + 1) * gap]) / 2;
+		else
+			x[i * gap] += x[(i - 1) * gap];
+	}
+}
+
+void wavelet_forward_3d_byte(signed char *x)
+{
+	int i, ii, iii, j, jj;
+	for (i = height, ii = width, iii = depth; i > 1 || ii > 1 || iii > 1; i = DIV_2_ROUND_UP(i), ii = DIV_2_ROUND_UP(ii), iii = DIV_2_ROUND_UP(iii))
+	{
+		for (jj = 0; jj < iii; jj++)
+		{
+			for (j = 0; j < i; j++)
+			{
+				predict_odd(x + j * width + jj * width * height, ii, 1);
+				update_even(x + j * width + jj * width * height, ii, 1);
+				split(x + j * width + jj * width * height, ii, 1);
+			}
+			for (j = 0; j < ii; j++)
+			{
+				predict_odd(x + j + jj * width * height, i, width);
+				update_even(x + j + jj * width * height, i, width);
+				split(x + j + jj * width * height, i, width);
+			}
+		}
+		for (j = 0; j < i; j++)
+		for (jj = 0; jj < ii; jj++)
+		{
+			predict_odd(x + j * width + jj, iii, width * height);
+			update_even(x + j * width + jj, iii, width * height);
+			split(x + j * width + jj, iii, width * height);
+		}
+	}
+}
+
+void wavelet_inverse_3d_byte(signed char *x)
+{
+	int i, j, k;
+	for (i = count_subs - 1; i >= 0; i--)
+	{
+		for (k = 0; k < sub_lengths_y[i]; k++)
+		for (j = 0; j < sub_lengths_x[i]; j++)
+		{
+			merge(x + k * width + j, sub_lengths_z[i], width * height);
+			restore_even(x + k * width + j, sub_lengths_z[i], width * height);
+			restore_odd(x + k * width + j, sub_lengths_z[i], width * height);
+		}
+		for (k = 0; k < sub_lengths_z[i]; k++)
+		{
+			for (j = 0; j < sub_lengths_x[i]; j++)
+			{
+				merge(x + j + k * width * height, sub_lengths_y[i], width);
+				restore_even(x + j + k * width * height, sub_lengths_y[i], width);
+				restore_odd(x + j + k * width * height, sub_lengths_y[i], width);
+			}
+			for (j = 0; j < sub_lengths_y[i]; j++)
+			{
+				merge(x + j * width + k * width * height, sub_lengths_x[i], 1);
+				restore_even(x + j * width + k * width * height, sub_lengths_x[i], 1);
+				restore_odd(x + j * width + k * width * height, sub_lengths_x[i], 1);
+			}
+		}
+	}
+}
+
+void wavelet_copy_fragment_3d_byte(signed char *source, signed char *target, int fragment, int *fragment_width, int *fragment_height, int *fragment_depth)
+{
+	int i, j;
+	if (fragment_width != NULL)
+		*fragment_width = sub_lengths_x[fragment];
+	if (fragment_height != NULL)
+		*fragment_height = sub_lengths_y[fragment];
+	if (fragment_depth != NULL)
+		*fragment_depth = sub_lengths_z[fragment];
+	if (target != NULL && source != NULL)
+	{
+		for (j = 0; j < sub_lengths_z[fragment]; j++)
+		for (i = 0; i < sub_lengths_y[fragment]; i++)
+		{
+			memcpy(
+				target + sub_lengths_x[fragment] * i + sub_lengths_x[fragment] * sub_lengths_y[fragment] * j,
+				source + width * i + width * height * j,
+				sizeof(signed char) * sub_lengths_x[fragment]);
+		}
+	}
+}
+void wavelet_paste_fragment_3d_byte(signed char *source, signed char *target, int fragment, int *fragment_width, int *fragment_height, int *fragment_depth)
+{
+	int i, j;
+	if (fragment_width != NULL)
+		*fragment_width = sub_lengths_x[fragment];
+	if (fragment_height != NULL)
+		*fragment_height = sub_lengths_y[fragment];
+	if (fragment_depth != NULL)
+		*fragment_depth = sub_lengths_z[fragment];
+	if (source != NULL && target != NULL)
+	{
+		for (j = 0; j < sub_lengths_z[fragment]; j++)
+		for (i = 0; i < sub_lengths_y[fragment]; i++)
+		{
+			memcpy(
+				target + width * i + width * height * j,
+				source + sub_lengths_x[fragment] * i + sub_lengths_x[fragment] * sub_lengths_y[fragment] * j,
+				sizeof(signed char) * sub_lengths_x[fragment]);
+		}
+	}
+}
+
+void wavelet_init_3d_byte(int a_width, int a_height, int a_depth)
+{
+	int i, ii, iii;
+	width = a_width;
+	height = a_height;
+	depth = a_depth;
+
+	// In case of length power of two, fill array with power of two values descending from length.
+	// In all other cases this sequence is not trivial.
+	sub_lengths_x = (int*)malloc(sizeof(int) * (int)(1 + log(max(max(width, height), depth)) / log(2)));
+	sub_lengths_y = (int*)malloc(sizeof(int) * (int)(1 + log(max(max(width, height), depth)) / log(2)));
+	sub_lengths_z = (int*)malloc(sizeof(int) * (int)(1 + log(max(max(width, height), depth)) / log(2)));
+	for (ii = width, i = height, iii = depth; ii > 1 || i > 1 || iii > 1; ii = DIV_2_ROUND_UP(ii), i = DIV_2_ROUND_UP(i), iii = DIV_2_ROUND_UP(iii))
+	{
+		sub_lengths_x[count_subs] = ii;
+		sub_lengths_y[count_subs] = i;
+		sub_lengths_z[count_subs] = iii;
+		count_subs++;
+	}
+
+	split_buffer = (signed char*)malloc(sizeof(signed char) * max(max(width, height), depth));
+}
+void wavelet_close_3d_byte()
+{
+	count_subs = 0;
+	free(sub_lengths_x);
+	free(sub_lengths_y);
+	free(sub_lengths_z);
+	free(split_buffer);
+}

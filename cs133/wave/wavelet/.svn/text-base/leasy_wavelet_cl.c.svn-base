@@ -1,0 +1,371 @@
+// Leasy (linear prediction) Wavelet Transform with Lifting
+// Author: Arkadi Kagan
+//
+// This code strictly follows recipe from:
+// Ingrid Doubaches and Wim Sweldens, "Factoring Wavelet Transform into Lifting Steps",
+// Journal of Fourier Analysis and Applications, Volume 4, Number 3, May 1998, pages 247-269,
+// DOI: 10.1007/BF02476026
+//
+// The simplified process of Fast Discrete Wavelet Transform can be reformulated as follow:
+// * Split the source sequence into odd and even members.
+// * Predict odd members by corresponding values of the surrounding even members.
+//   In our case, we compute mean x[i - 1] and x[i + 1].
+//   We store delta = x[i] - Predicted(x[i]) as a coefficient.
+// * Update the even members to restore the mean value to be equal to the overall mean value.
+//   In our case we add (delta[i - 1] + delta[i + 1]) / 4 to each even member.
+// After this process is completted, we have a set of updated original values (even members)
+// and a separate set of coefficients to be stored. The updated original values are farther
+// processed in recursion.
+//
+// The defined above method computes Leasy (linear prediction) Wavelet Transform. In this project
+// we do not attempt to create general code that fit all possible Wavelet Transforms. Instead,
+// our aim is to create a single efficient implementation that can be used as an auxiliary
+// tool for other tasks.
+//
+// This algorithm is using integer arithmetic only in the main processing loop.
+//
+
+#include "leasy_wavelet_cl.h"
+#include <math.h>
+#include <stdlib.h>
+#include <memory.h>
+#include <stdio.h>
+#include <ctype.h>
+
+#include <CL/cl.h>
+
+#define DIV_2_ROUND_UP(x) (((int)(x)) / 2 + ((int)(x)) % 2)
+
+static int *sub_lengths = NULL;
+static int count_subs = 0;
+static int length;
+
+// Let only single device to do the work
+static cl_context context;
+static cl_device_id device;
+static cl_kernel
+	kernel_split,
+	kernel_merge,
+	kernel_predict_odd,
+	kernel_update_even,
+	kernel_restore_odd,
+	kernel_restore_even;
+static cl_command_queue queue;
+
+static const char *cl_code =
+	"#define HALF_UP(x) (((x) / 2) + ((x) % 2))"     "\n"
+	""                                               "\n"
+	"// Run in a 2-D work-set: Nx2 global threads"   "\n"
+	"__kernel void split("                           "\n"
+	"	__global signed char *source,"               "\n"
+	"	__global signed char *target,"               "\n"
+	"	int length)"                                 "\n"
+	"{"                                              "\n"
+	"	const int j = get_global_id(0);"             "\n"
+	"	const int odd = get_global_id(1);"           "\n"
+	"	const int half = odd * HALF_UP(length);"     "\n"
+	"	if (odd > 1)"                                "\n"
+	"		return;"                                 "\n"
+	"	if (j * 2 + odd < length)"                   "\n"
+	"		target[j + half] = source[j * 2 + odd];" "\n"
+	"}"                                              "\n"
+	"\n"
+
+	"// Run in a 2-D work-set: Nx2 global threads"   "\n"
+	"__kernel void merge("                           "\n"
+	"	__global signed char *source,"               "\n"
+	"	__global signed char *target,"               "\n"
+	"	int length)"                                 "\n"
+	"{"                                              "\n"
+	"	const int j = get_global_id(0);"             "\n"
+	"	const int odd = get_global_id(1);"           "\n"
+	"	const int half = odd * HALF_UP(length);"     "\n"
+	"	if (odd > 1)"                                "\n"
+	"		return;"                                 "\n"
+	"	if (j * 2 + odd < length)"                   "\n"
+	"		target[j * 2 + odd] = source[j + half];" "\n"
+	"}"                                              "\n"
+	"\n"
+
+	"// Run in a 1-D global work-set"                                     "\n"
+	"__kernel void predict_odd("                                          "\n"
+	"	__global signed char *source,"                                    "\n"
+	"	__global signed char *target,"                                    "\n"
+	"	int length)"                                                      "\n"
+	"{"                                                                   "\n"
+	"	const int i = get_global_id(0);"                                  "\n"
+	"	if (i % 2 == 0)"                                                  "\n"
+	"		target[i] = source[i];"                                       "\n"
+	"	else if (i > 0 && i < length - 1)"                                "\n"
+	"		target[i] = source[i] - (source[i - 1] + source[i + 1]) / 2;" "\n"
+	"	else if (i > 0)"                                                  "\n"
+	"		target[i] = source[i] - source[i - 1];"                       "\n"
+	"	else if (i < length - 1)"                                         "\n"
+	"		target[i] = source[i] - source[i + 1];"                       "\n"
+	"}"                                                                   "\n"
+	"\n"
+
+	"// Run in a 1-D global work-set"                                     "\n"
+	"__kernel void update_even("                                          "\n"
+	"	__global signed char *source,"                                    "\n"
+	"	__global signed char *target,"                                    "\n"
+	"	int length)"                                                      "\n"
+	"{"                                                                   "\n"
+	"	const int i = get_global_id(0);"                                  "\n"
+	"	if (i % 2 == 1)"                                                  "\n"
+	"		target[i] = source[i];"                                       "\n"
+	"	else if (i > 0 && i < length - 1)"                                "\n"
+	"		target[i] = source[i] + (source[i - 1] + source[i + 1]) / 4;" "\n"
+	"	else if (i > 0)"                                                  "\n"
+	"		target[i] = source[i] + source[i - 1] / 2;"                   "\n"
+	"	else if (i < length - 1)"                                         "\n"
+	"		target[i] = source[i] + source[i + 1] / 2;"                   "\n"
+	"}"                                                                   "\n"
+	"\n"
+
+	"// Run in a 1-D global work-set"                                     "\n"
+	"__kernel void restore_even("                                          "\n"
+	"	__global signed char *source,"                                    "\n"
+	"	__global signed char *target,"                                    "\n"
+	"	int length)"                                                      "\n"
+	"{"                                                                   "\n"
+	"	const int i = get_global_id(0);"                                  "\n"
+	"	if (i % 2 == 1)"                                                  "\n"
+	"		target[i] = source[i];"                                       "\n"
+	"	else if (i > 0 && i < length - 1)"                                "\n"
+	"		target[i] = source[i] - (source[i - 1] + source[i + 1]) / 4;" "\n"
+	"	else if (i > 0)"                                                  "\n"
+	"		target[i] = source[i] - source[i - 1] / 2;"                   "\n"
+	"	else if (i < length - 1)"                                         "\n"
+	"		target[i] = source[i] - source[i + 1] / 2;"                   "\n"
+	"}"                                                                   "\n"
+	"\n"
+
+	"// Run in a 1-D global work-set"                                     "\n"
+	"__kernel void restore_odd("                                          "\n"
+	"	__global signed char *source,"                                    "\n"
+	"	__global signed char *target,"                                    "\n"
+	"	int length)"                                                      "\n"
+	"{"                                                                   "\n"
+	"	const int i = get_global_id(0);"                                  "\n"
+	"	if (i % 2 == 0)"                                                  "\n"
+	"		target[i] = source[i];"                                       "\n"
+	"	else if (i > 0 && i < length - 1)"                                "\n"
+	"		target[i] = source[i] + (source[i - 1] + source[i + 1]) / 2;" "\n"
+	"	else if (i > 0)"                                                  "\n"
+	"		target[i] = source[i] + source[i - 1];"                       "\n"
+	"	else if (i < length - 1)"                                         "\n"
+	"		target[i] = source[i] + source[i + 1];"                       "\n"
+	"}"                                                                   "\n"
+	"\n"
+	;
+
+static void cl_check(cl_int result)
+{
+	if (result == CL_SUCCESS)
+		return;
+	fprintf(stderr, "Error: %d\n", result);
+	exit(result);
+}
+
+static void enqueue_kernel_split_merge(cl_kernel kernel, cl_mem source, cl_mem target, int length)
+{
+	size_t dims[2];
+
+	cl_check(clSetKernelArg(kernel, 0, sizeof(cl_mem), &source));
+	cl_check(clSetKernelArg(kernel, 1, sizeof(cl_mem), &target));
+	cl_check(clSetKernelArg(kernel, 2, sizeof(int), &length));
+
+	dims[0] = length;
+	dims[1] = 2;
+	cl_check(clEnqueueNDRangeKernel(queue, kernel, 2, NULL, dims, NULL, 0, NULL, NULL));
+}
+
+static void split(cl_mem source, cl_mem target, int length)
+{
+	enqueue_kernel_split_merge(kernel_split, source, target, length);
+}
+static void merge(cl_mem source, cl_mem target, int length)
+{
+	enqueue_kernel_split_merge(kernel_merge, source, target, length);
+}
+
+static void enqueue_kernel_transform_restore(cl_kernel kernel, cl_mem source, cl_mem target, int length)
+{
+	size_t dims[1];
+
+	cl_check(clSetKernelArg(kernel, 0, sizeof(cl_mem), &source));
+	cl_check(clSetKernelArg(kernel, 1, sizeof(cl_mem), &target));
+	cl_check(clSetKernelArg(kernel, 2, sizeof(int), &length));
+
+	dims[0] = length;
+	cl_check(clEnqueueNDRangeKernel(queue, kernel, 1, NULL, dims, NULL, 0, NULL, NULL));
+}
+
+static void predict_odd(cl_mem source, cl_mem target, int length)
+{
+	enqueue_kernel_transform_restore(kernel_predict_odd, source, target, length);
+}
+
+static void update_even(cl_mem source, cl_mem target, int length)
+{
+	enqueue_kernel_transform_restore(kernel_update_even, source, target, length);
+}
+
+static void restore_even(cl_mem source, cl_mem target, int length)
+{
+	enqueue_kernel_transform_restore(kernel_restore_even, source, target, length);
+}
+
+static void restore_odd(cl_mem source, cl_mem target, int length)
+{
+	enqueue_kernel_transform_restore(kernel_restore_odd, source, target, length);
+}
+
+void wavelet_forward_cl(signed char *x)
+{
+	int i;
+	cl_mem buffer1 = clCreateBuffer(context, CL_MEM_READ_WRITE | CL_MEM_COPY_HOST_PTR, length, x, NULL);
+	cl_mem buffer2 = clCreateBuffer(context, CL_MEM_READ_WRITE, length, NULL, NULL);
+
+	queue = clCreateCommandQueue(context, device, 0, NULL);
+	clEnqueueCopyBuffer(queue, buffer1, buffer2, 0, 0, length, 0, NULL, NULL);
+	for (i = length; i > 1; i = DIV_2_ROUND_UP(i))
+	{
+		predict_odd(buffer1, buffer2, i);
+		update_even(buffer2, buffer1, i);
+		split(buffer1, buffer2, i);
+		clEnqueueCopyBuffer(queue, buffer2, buffer1, 0, 0, length, 0, NULL, NULL);
+	}
+
+	cl_check(clEnqueueReadBuffer(queue, buffer1, CL_FALSE, 0, length, x, 0, NULL, NULL));
+	cl_check(clFinish(queue));
+
+	clReleaseCommandQueue(queue);
+	clReleaseMemObject(buffer1);
+	clReleaseMemObject(buffer2);
+}
+
+void wavelet_inverse_cl(signed char *x)
+{
+	int i;
+	cl_mem buffer1 = clCreateBuffer(context, CL_MEM_READ_WRITE | CL_MEM_COPY_HOST_PTR, length, x, NULL);
+	cl_mem buffer2 = clCreateBuffer(context, CL_MEM_READ_WRITE, length, NULL, NULL);
+
+	queue = clCreateCommandQueue(context, device, 0, NULL);
+	clEnqueueCopyBuffer(queue, buffer1, buffer2, 0, 0, length, 0, NULL, NULL);
+	for (i = count_subs - 1; i >= 0; i--)
+	{
+		merge(buffer1, buffer2, sub_lengths[i]);
+		restore_even(buffer2, buffer1, sub_lengths[i]);
+		restore_odd(buffer1, buffer2, sub_lengths[i]);
+		clEnqueueCopyBuffer(queue, buffer2, buffer1, 0, 0, length, 0, NULL, NULL);
+	}
+
+	cl_check(clEnqueueReadBuffer(queue, buffer1, CL_FALSE, 0, length, x, 0, NULL, NULL));
+	cl_check(clFinish(queue));
+
+	clReleaseCommandQueue(queue);
+	clReleaseMemObject(buffer1);
+	clReleaseMemObject(buffer2);
+}
+
+void wavelet_copy_fragment_cl(signed char *x, signed char *target, int fragment, int *fragment_length)
+{
+	if (fragment_length != NULL)
+		*fragment_length = sub_lengths[fragment];
+	if (target != NULL && x != NULL)
+		memcpy(target, x, sizeof(signed char) * sub_lengths[fragment]);
+}
+
+static void CL_CALLBACK cl_notify(const char *errinfo, const void *private_info, size_t cb, void *user_data)
+{
+	fprintf(stderr, "Error: %s\n", errinfo);
+	if (private_info)
+	{
+		size_t i, j;
+		fprintf(stderr, "Private bytes:\n");
+		for (i = 0; i < cb; i++)
+		{
+			if (i > 0 && i % 16 == 0)
+			{
+				for (j = i - 16; j < i; j++)
+					fprintf(stderr, "%c ", isascii(((char*)private_info)[j]) ? ((char*)private_info)[j] : '.');
+				fprintf(stderr, "\n");
+			}
+			fprintf(stderr, "%02X ", ((char*)private_info)[i]);
+		}
+		for (j = 0; j < 16 - cb % 16; j++)
+			fprintf(stderr, "   ");
+		for (j = cb - (cb % 16); j < cb; j++)
+			fprintf(stderr, "%c ", isascii(((char*)private_info)[j]) ? ((char*)private_info)[j] : '.');
+		fprintf(stderr, "\n");
+	}
+}
+
+static void init_cl()
+{
+	cl_uint num_platforms;
+	cl_platform_id *platforms;
+	cl_uint num_devices;
+	cl_device_id *devices;
+	cl_context_properties properties[3];
+	cl_program program;
+
+	cl_check(clGetPlatformIDs(0, NULL, &num_platforms));
+	platforms = (cl_platform_id*)malloc(sizeof(cl_platform_id) * num_platforms);
+	cl_check(clGetPlatformIDs(num_platforms, platforms, NULL));
+
+	cl_check(clGetDeviceIDs(platforms[0], CL_DEVICE_TYPE_ALL, 0, NULL, &num_devices));
+	devices = (cl_device_id*)malloc(sizeof(cl_device_id) * num_devices);
+	cl_check(clGetDeviceIDs(platforms[0], CL_DEVICE_TYPE_ALL, num_devices, devices, NULL));
+	device = devices[0];
+
+	properties[0] = CL_CONTEXT_PLATFORM;
+	properties[1] = (cl_context_properties)platforms[0];
+	properties[2] = 0;
+	context = clCreateContext(properties, num_devices, devices, cl_notify, NULL, NULL);
+
+	program = clCreateProgramWithSource(context, 1,
+		&cl_code,
+		NULL, NULL);
+	cl_check(clBuildProgram(program, num_devices, devices, "", NULL, NULL));
+
+	kernel_split = clCreateKernel(program, "split", NULL);
+	kernel_merge = clCreateKernel(program, "merge", NULL);
+	kernel_predict_odd = clCreateKernel(program, "predict_odd", NULL);
+	kernel_update_even = clCreateKernel(program, "update_even", NULL);
+	kernel_restore_odd = clCreateKernel(program, "restore_odd", NULL);
+	kernel_restore_even = clCreateKernel(program, "restore_even", NULL);
+
+	clReleaseProgram(program);
+	free(devices);
+	free(platforms);
+}
+
+void wavelet_init_cl(int a_length)
+{
+	int i;
+	length = a_length;
+	
+	init_cl();
+
+	// In case of length power of two, fill array with power of two values descending from length.
+	// In all other cases this sequence is not trivial.
+	sub_lengths = (int*)malloc(sizeof(int) * (int)(1 + logl(length) / logl(2)));
+	for (i = length; i > 1; i = DIV_2_ROUND_UP(i))
+		sub_lengths[count_subs++] = i;
+}
+void wavelet_close_cl()
+{
+	clReleaseKernel(kernel_split);
+	clReleaseKernel(kernel_merge);
+	clReleaseKernel(kernel_predict_odd);
+	clReleaseKernel(kernel_update_even);
+	clReleaseKernel(kernel_restore_odd);
+	clReleaseKernel(kernel_restore_even);
+	clReleaseContext(context);
+
+	count_subs = 0;
+	free(sub_lengths);
+}

@@ -1,0 +1,17 @@
+#ifndef __LEASY_WAVELET_2D_H
+#define __LEASY_WAVELET_2D_H
+
+void wavelet_init_2d(int width, int height);
+void wavelet_close_2d();
+
+void wavelet_forward_2d(double *x);
+void wavelet_inverse_2d(double *x);
+
+// Copy fragment of coefficients in consistent way, allowing farther wavelet_inverse_2d to succeed
+// fragment 0 -> all coefficients, similar to memcpy
+// fragment 1 -> 1 / 4 coeffecients
+// fragment 2 -> 1 / 16 coefficients
+// It is safe to pass-in NULL parameters - they are skipped
+void wavelet_copy_fragment_2d(double *x, double *target, int fragment, int *fragment_width, int *fragment_height);
+
+#endif	// __LEASY_WAVELET_2D_H

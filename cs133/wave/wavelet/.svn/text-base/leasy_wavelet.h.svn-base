@@ -1,0 +1,18 @@
+#ifndef __LEASY_WAVELET_H
+#define __LEASY_WAVELET_H
+
+void wavelet_init(int length);
+void wavelet_close();
+
+void wavelet_forward(double *x);
+void wavelet_inverse(double *x);
+
+// Copy fragment of coefficients in consistent way, allowing farther wavelet_inverse to succeed
+// fragment 0 -> all coefficients, similar to memcpy
+// fragment 1 -> 1 / 2 coeffecients
+// fragment 2 -> 1 / 4 coefficients
+// Note that fragment_length is length/2 only for power of two lengths in fragment 1.
+// It is safe to pass-in NULL parameters - they are skipped
+void wavelet_copy_fragment(double *x, double *target, int fragment, int *fragment_length);
+
+#endif	// __LEASY_WAVELET_H
