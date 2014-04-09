@@ -1,0 +1,81 @@
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087013.531660 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087523.839991 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087747.811656 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <type 'exceptions.UnboundLocalError'>: local variable 'outmsg' referenced before assignment
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087793.176634 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <type 'exceptions.NameError'>: global name 'message' is not defined
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087834.744976 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.015,"max_id":274185792845406209,"max_id_str":"274185792845406209","next_page":"?page=2&max_id=274185792845406209&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274185792845406209&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:19:21 +0000","from_user":"Rianna_Ri","from_user_id":283003416,"from_user_id_str":"283003416","from_user_name":"Rianna","geo":null,"location":"LDN\/LU","id":274185792845406209,"id_str":"274185792845406209","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2900654009\/3675dcb1a2361f6a07fae264a44bcb3b_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2900654009\/3675dcb1a2361f6a07fae264a44bcb3b_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/download\/iphone&quot;&gt;Twitter for iPhone&lt;\/a&gt;","text":"RT @RiaLadz: This assignment will kill me todaaay","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null},{"created_at":"Thu, 29 Nov 2012 16:19:20 +0000","from_user":"JsvSvxD","from_user_id":581953511,"from_user_id_str":"581953511","from_user_name":"jaiveer singh deuba","geo":null,"location":"Kathmandu, Nepal","id":274185785899634688,"id_str":"274185785899634688","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2830767764\/0d7907876bb70681a3776be047d8cca0_normal.png","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2830767764\/0d7907876bb70681a3776be047d8cca0_normal.png","source":"&lt;a href=&quot;http:\/\/twitter.com\/&quot;&gt;web&lt;\/a&gt;","text":"@veraescaliente @GLEEonFOX @DiannaAgron @NayaRivera you were just onto somthing.. now it's back to glee hahaha","to_user":"veraescaliente","to_user_id":51182129,"to_user_id_str":"51182129","to_user_name":"Vera J. Shrestha","in_reply_to_status_id":274183306415861760,"in_reply_to_status_id_str":"274183306415861760"}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.023,"max_id":274188244357365760,"max_id_str":"274188244357365760","next_page":"?page=2&max_id=274188244357365760&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274188244357365760&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:29:06 +0000","from_user":"anantabrt","from_user_id":141220687,"from_user_id_str":"141220687","from_user_name":"Ananta Koirala","geo":null,"location":"Kathmandu","id":274188244357365760,"id_str":"274188244357365760","iso_language_code":"ne","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2886466099\/563da81b48aa6dd98a5852ffab085ac5_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2886466099\/563da81b48aa6dd98a5852ffab085ac5_normal.jpeg","source":"&lt;a href=&quot;http:\/\/www.tweetdeck.com&quot;&gt;TweetDeck&lt;\/a&gt;","text":"@sahiladai \u0905\u0917\u093f \u0926\u0947\u0916\u093f \u092d\u0928\u093f\u0930\u093e'\u091b\u0941 \u0924 ;-) \u091c\u0928\u094d\u0924\u0940 \u091c\u093e\u0928\u0947 \u092c\u0947\u0932\u093e \u0915\u093e\u0930\u094d\u0921 \u092a\u0920\u093e\u092e\u094d\u0932\u093e :P @risihs @baabajee","to_user":"sahiladai","to_user_id":285989904,"to_user_id_str":"285989904","to_user_name":"\u0938\u093e\u0939\u093f\u0902\u0932\u093e\u0926\u093e\u0907","in_reply_to_status_id":274188025485991936,"in_reply_to_status_id_str":"274188025485991936"},{"created_at":"Thu, 29 Nov 2012 16:29:05 +0000","from_user":"Frank_Bags","from_user_id":467949165,"from_user_id_str":"467949165","from_user_name":"CH\u00a3\u00a3S\u00a3 Bags","geo":null,"location":"LDN","id":274188241463279617,"id_str":"274188241463279617","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2754897161\/94e3d2c542a68fd91526618f3de8b0da_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2754897161\/94e3d2c542a68fd91526618f3de8b0da_normal.jpeg","source":"&lt;a href=&quot;http:\/\/blackberry.com\/twitter&quot;&gt;Twitter for BlackBerry\u00ae&lt;\/a&gt;","text":"@NikoNjc you can play semi-pro and get a bit of extra cash","to_user":"NikoNjc","to_user_id":464040136,"to_user_id_str":"464040136","to_user_name":"Cold","in_reply_to_status_id":274187789241810948,"in_reply_to_status_id_str":"274187789241810948"}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 1343242 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.021,"max_id":274188318487490560,"max_id_str":"274188318487490560","next_page":"?page=2&max_id=274188318487490560&q=&geocode=27.5916%2C86.564%2C1343242km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274188318487490560&q=&geocode=27.5916%2C86.564%2C1343242km","results":[{"created_at":"Thu, 29 Nov 2012 16:29:23 +0000","from_user":"valnogueira_","from_user_id":485893578,"from_user_id_str":"485893578","from_user_name":"val nogueira","geo":null,"location":"ali \u00f3  -","id":274188318487490560,"id_str":"274188318487490560","iso_language_code":"pt","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2879831776\/0f6a33832c52d5b3347b665f3013ba5a_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2879831776\/0f6a33832c52d5b3347b665f3013ba5a_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/&quot;&gt;web&lt;\/a&gt;","text":"assim que tu v\u00ea as amizades, as pinta acham que a gente t\u00e1 dormindo, acham ...","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null},{"created_at":"Thu, 29 Nov 2012 16:29:23 +0000","from_user":"kyounes92","from_user_id":553477352,"from_user_id_str":"553477352","from_user_name":"khaled younes","geo":null,"location":"Dubai","id":274188318445551616,"id_str":"274188318445551616","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2659427912\/07dd459258717a1b9c8180704721693b_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2659427912\/07dd459258717a1b9c8180704721693b_normal.jpeg","source":"&lt;a href=&quot;http:\/\/blackberry.com\/twitter&quot;&gt;Twitter for BlackBerry\u00ae&lt;\/a&gt;","text":"RT @ItsFunnyLife: I wish I could go back to the day I met you...and walk the hell away.","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1088818.407551 Gasol kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1088818.407551 Gasol kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.027,"max_id":274190020028547072,"max_id_str":"274190020028547072","next_page":"?page=2&max_id=274190020028547072&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274190020028547072&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:36:09 +0000","from_user":"curlyhair_xo","from_user_id":417483676,"from_user_id_str":"417483676","from_user_name":"S\u0398S\u0245;\u2665","geo":null,"location":"SE LDN","id":274190020028547072,"id_str":"274190020028547072","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2911266094\/c630e81b03435e57fd97347ad62cdd5e_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2911266094\/c630e81b03435e57fd97347ad62cdd5e_normal.jpeg","source":"&lt;a href=&quot;http:\/\/blackberry.com\/twitter&quot;&gt;Twitter for BlackBerry\u00ae&lt;\/a&gt;","text":"everyone thought I was ill cos I was being nice \/: dpmo.","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null},{"created_at":"Thu, 29 Nov 2012 16:36:08 +0000","from_user":"PriPri_xo","from_user_id":195771135,"from_user_id_str":"195771135","from_user_name":"Priya","geo":null,"location":"London ","id":274190013628030976,"id_str":"274190013628030976","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2873538900\/f6e5facca7cd1d8cae4e4402d5af1fb5_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2873538900\/f6e5facca7cd1d8cae4e4402d5af1fb5_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/download\/iphone&quot;&gt;Twitter for iPhone&lt;\/a&gt;","text":"RT @_GLAMORELLE: \"@PriPri_xo: Some of you girls saying \"there's a difference between being curvy and fat\" are fat \ud83d\udc40\ud83d\ude33\" &lt; Loooooooooool priyaaaaa","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1117191.890839 Bryant kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]

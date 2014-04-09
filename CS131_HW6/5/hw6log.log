@@ -1,0 +1,1690 @@
+INFO:root:Connection made. 
+INFO:root:Input message: ÿôÿý
+INFO:root:Command unrecognized. OUTPUT MSG: ? ÿôÿý
+
+INFO:root:Input message: ÿûWhat
+INFO:root:Command unrecognized. OUTPUT MSG: ? ÿûWhat
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: Okay.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Okay.
+
+INFO:root:Input message: There you go
+INFO:root:Command unrecognized. OUTPUT MSG: ? There
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message:      
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                       MobaXterm Personal Edition v6.0                  
+INFO:root:Command unrecognized. OUTPUT MSG: ? MobaXterm
+
+INFO:root:Input message:                  (Unix utilities and X-server on Gnu/Cygwin)             
+INFO:root:Command unrecognized. OUTPUT MSG: ? (Unix
+
+INFO:root:Input message:                                                                          
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:        Your computer drives are accessible through the /drives path     
+INFO:root:Command unrecognized. OUTPUT MSG: ? Your
+
+INFO:root:Input message:        Your DISPLAY is set to 192.168.0.7:0.0                           
+INFO:root:Command unrecognized. OUTPUT MSG: ? Your
+
+INFO:root:Input message:        When using SSH, your remote DISPLAY is automatically forwarded   
+INFO:root:Command unrecognized. OUTPUT MSG: ? When
+
+INFO:root:Input message:        Each command status is specified by a special symbol (v or x)    
+INFO:root:Command unrecognized. OUTPUT MSG: ? Each
+
+INFO:root:Input message:                                                                          
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:        Important:                                                       
+INFO:root:Command unrecognized. OUTPUT MSG: ? Important:
+
+INFO:root:Input message:       This is MobaXterm Personal Edition. The Professional edition       
+INFO:root:Command unrecognized. OUTPUT MSG: ? This
+
+INFO:root:Input message:       allows you to customize MobaXterm for your company: you can add    
+INFO:root:Command unrecognized. OUTPUT MSG: ? allows
+
+INFO:root:Input message:       your own logo, your parameters, your welcome message and generate  
+INFO:root:Command unrecognized. OUTPUT MSG: ? your
+
+INFO:root:Input message:       either an MSI installation package or a portable executable.       
+INFO:root:Command unrecognized. OUTPUT MSG: ? either
+
+INFO:root:Input message:       We can also modify MobaXterm or develop the plugins you need.      
+INFO:root:Command unrecognized. OUTPUT MSG: ? We
+
+INFO:root:Input message:       For more information: http://mobaxterm.mobatek.net/versions.php    
+INFO:root:Command unrecognized. OUTPUT MSG: ? For
+
+INFO:root:Input message:      
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: keny@lnxsrv.seas.ucla.edu's password:
+INFO:root:Command unrecognized. OUTPUT MSG: ? keny@lnxsrv.seas.ucla.edu's
+
+INFO:root:Input message: Last login: Thu Nov 29 07:57:11 2012 from cpe-198-72-214-165.socal.res.rr.com
+INFO:root:Command unrecognized. OUTPUT MSG: ? Last
+
+INFO:root:Input message: *****************************************************************************
+INFO:root:Command unrecognized. OUTPUT MSG: ? *****************************************************************************
+
+INFO:root:Input message:                  lnxsrv04.seas.ucla.edu RHEL 6
+INFO:root:Command unrecognized. OUTPUT MSG: ? lnxsrv04.seas.ucla.edu
+
+INFO:root:Input message: *****************************************************************************
+INFO:root:Command unrecognized. OUTPUT MSG: ? *****************************************************************************
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:     * Please use "lnxsrv.seas.ucla.edu" to login for load balancing
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message:     * User processes older than 36 hours will be cleaned up
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message:     * You can run graphical applications from your PC using SSH and Xming
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message:     !! Please see http://www.seasnet.ucla.edu/UnixServers/lnxsrv !!
+INFO:root:Command unrecognized. OUTPUT MSG: ? !!
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: *****************************************************************************
+INFO:root:Command unrecognized. OUTPUT MSG: ? *****************************************************************************
+
+INFO:root:Input message: *****************************************************************************
+INFO:root:Command unrecognized. OUTPUT MSG: ? *****************************************************************************
+
+INFO:root:Input message: * SEASnet Computing Access                                                  *
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message: * ------------------------------------------------------------------------- *
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message: * Priority is given both on the servers and in the student labs to those    *
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message: * students doing coursework. Computing support for research is provided by  *
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message: * each department.                                                          *
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message: *****************************************************************************
+INFO:root:Command unrecognized. OUTPUT MSG: ? *****************************************************************************
+
+INFO:root:Input message: * For assistance please contact help@seas.ucla.edu or call 206-6864.        *
+INFO:root:Command unrecognized. OUTPUT MSG: ? *
+
+INFO:root:Input message: *****************************************************************************
+INFO:root:Command unrecognized. OUTPUT MSG: ? *****************************************************************************
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ set path=(/usr/local/cs/bin $path)
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1086696.665208 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: AT +1088818.407551 Gasol kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Input message: Connection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Input message: AT +1087013.531660 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: Connection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Input message: AT +1087523.839991 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: Connection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Input message: AT +1087643.266662 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: Connection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Input message: AT +1087747.811656 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: Connection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Input message: AT +1087793.176634 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: Connection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Input message: AT +1087834.744976 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: Connection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: telnet: connect to address 127.0.0.1: Connection refused
+INFO:root:Command unrecognized. OUTPUT MSG: ? telnet:
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: from twisted.protocols import basic
+INFO:root:Command unrecognized. OUTPUT MSG: ? from
+
+INFO:root:Input message: from t? from
+INFO:root:Command unrecognized. OUTPUT MSG: ? from
+
+INFO:root:Input message: ime import time
+INFO:root:Command unrecognized. OUTPUT MSG: ? ime
+
+INFO:root:Input message: ? from
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: import httplib
+INFO:root:Command unrecognized. OUTPUT MSG: ? import
+
+INFO:root:Input message: imp? import
+INFO:root:Command unrecognized. OUTPUT MSG: ? imp?
+
+INFO:root:Input message: ort re
+INFO:root:Command unrecognized. OUTPUT MSG: ? ort
+
+INFO:root:Input message: import ? import
+INFO:root:Command unrecognized. OUTPUT MSG: ? import
+
+INFO:root:Input message: logging
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging
+
+INFO:root:Input message: from twisted.int? import
+INFO:root:Command unrecognized. OUTPUT MSG: ? from
+
+INFO:root:Input message: ernet import protocol, reactor, defer
+INFO:root:Command unrecognized. OUTPUT MSG: ? ernet
+
+INFO:root:Input message: from twisted? from
+INFO:root:Command unrecognized. OUTPUT MSG: ? from
+
+INFO:root:Input message: .application import service, internet
+INFO:root:Command unrecognized. OUTPUT MSG: ? .application
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: PORT = 12782
+INFO:root:Command unrecognized. OUTPUT MSG: ? PORT
+
+INFO:root:Input message: ? from
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? PORT
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: PATTERN = re.compile('([\+\-]\d+\.\d+)([\+\-]\d+\.\d+)')
+INFO:root:Command unrecognized. OUTPUT MSG: ? PATTERN
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: # S? PATTERN
+INFO:root:Command unrecognized. OUTPUT MSG: ? #
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: et up logging
+INFO:root:Command unrecognized. OUTPUT MSG: ? et
+
+INFO:root:Input message: logging.basicC? #
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.basicC?
+
+INFO:root:Input message: onfig(filename='hw6log.log', level=logging.DEBUG)
+INFO:root:Command unrecognized. OUTPUT MSG: ? onfig(filename='hw6log.log',
+
+INFO:root:Input message: class Mess? logging.basicConfig(filename='hw6log.log',
+INFO:root:Command unrecognized. OUTPUT MSG: ? class
+
+INFO:root:Input message: ageReceiver(basic.LineReceiver):
+INFO:root:Command unrecognized. OUTPUT MSG: ? ageReceiver(basic.LineReceiver):
+
+INFO:root:Input message:         name ? class
+INFO:root:Command unrecognized. OUTPUT MSG: ? name
+
+INFO:root:Input message: = 'Gasol' #server Gasol
+INFO:root:Command unrecognized. OUTPUT MSG: ? =
+
+INFO:root:Input message:         databas? name
+INFO:root:Command unrecognized. OUTPUT MSG: ? databas?
+
+INFO:root:Input message: e = {} #Database of client info
+INFO:root:Command unrecognized. OUTPUT MSG: ? e
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         #Log ? database
+INFO:root:Command unrecognized. OUTPUT MSG: ? #Log
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: connection made
+INFO:root:Command unrecognized. OUTPUT MSG: ? connection
+
+INFO:root:Input message:         def conn? #Log
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message: ectionMade(self):
+INFO:root:Command unrecognized. OUTPUT MSG: ? ectionMade(self):
+
+INFO:root:Input message:                 print "Connection? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message:  made. "
+INFO:root:Command unrecognized. OUTPUT MSG: ? made.
+
+INFO:root:Input message:                 logging.i? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.i?
+
+INFO:root:Input message: nfo("Connection made. ")
+INFO:root:Command unrecognized. OUTPUT MSG: ? nfo("Connection
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         #log? logging.info("Connection
+INFO:root:Command unrecognized. OUTPUT MSG: ? #log?
+
+INFO:root:Input message:  con?
+INFO:root:Command unrecognized. OUTPUT MSG: ? con?
+
+INFO:root:Input message: nection dropped
+INFO:root:Command unrecognized. OUTPUT MSG: ? nection
+
+INFO:root:Input message:         def connection? #log
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message: Lost(self, reason):
+INFO:root:Command unrecognized. OUTPUT MSG: ? Lost(self,
+
+INFO:root:Input message:                 pri? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? pri?
+
+INFO:root:Input message: nt "Connection dropped: " + str(reason)
+INFO:root:Command unrecognized. OUTPUT MSG: ? nt
+
+INFO:root:Input message:                 logging.info("? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.info("?
+
+INFO:root:Input message: Connection dropped: " + str(reason))
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connection
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         #Process inc? logging.info("Connection
+INFO:root:Command unrecognized. OUTPUT MSG: ? #Process
+
+INFO:root:Input message: oming cli?
+INFO:root:Command unrecognized. OUTPUT MSG: ? oming
+
+INFO:root:Input message: ent message
+INFO:root:Command unrecognized. OUTPUT MSG: ? ent
+
+INFO:root:Input message:         d? #Process
+INFO:root:Command unrecognized. OUTPUT MSG: ? d?
+
+INFO:root:Input message: ef lineReceived(self, line):
+INFO:root:Command unrecognized. OUTPUT MSG: ? ef
+
+INFO:root:Input message:                 print line + ? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message: '\n'
+INFO:root:Command unrecognized. OUTPUT MSG: ? '\n'
+
+INFO:root:Input message:                 logging.info(? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.info(?
+
+INFO:root:Input message: "Input message: "+ line)
+INFO:root:Command unrecognized. OUTPUT MSG: ? "Input
+
+INFO:root:Input message:                 try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? try:
+
+INFO:root:Input message:                         msg? logging.info("Input
+INFO:root:Command unrecognized. OUTPUT MSG: ? msg?
+
+INFO:root:Input message:  = lin? try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? =
+
+INFO:root:Input message: e.split()
+INFO:root:Command unrecognized. OUTPUT MSG: ? e.split()
+
+INFO:root:Input message:                         if msg[0] ==? msg
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message: "IAMAT":
+INFO:root:Command unrecognized. OUTPUT MSG: ? "IAMAT":
+
+INFO:root:Input message:                                 self.processI? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.processI?
+
+INFO:root:Input message: AMAT(msg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? AMAT(msg)
+
+INFO:root:Input message:                         elif ? self.processIAMAT(msg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? elif
+
+INFO:root:Input message: msg[0] == "AT":
+INFO:root:Command unrecognized. OUTPUT MSG: ? msg[0]
+
+INFO:root:Input message:                                 self.pr? elif
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.pr?
+
+INFO:root:Input message: ocessAT(msg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ocessAT(msg)
+
+INFO:root:Input message:                         elif msg[0] ? self.processAT(msg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? elif
+
+INFO:root:Input message: =="WHATSAT":
+INFO:root:Command unrecognized. OUTPUT MSG: ? =="WHATSAT":
+
+INFO:root:Input message:                                 sel? elif
+INFO:root:Command unrecognized. OUTPUT MSG: ? sel?
+
+INFO:root:Input message: f.processWHATSAT(msg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? f.processWHATSAT(msg)
+
+INFO:root:Input message:         ? self.processWHATSAT(msg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:                 else:
+INFO:root:Command unrecognized. OUTPUT MSG: ? else:
+
+INFO:root:Input message:                                 outms? else:
+INFO:root:Command unrecognized. OUTPUT MSG: ? outms?
+
+INFO:root:Input message: g = "?" + " " + msg[0] + "\n"
+INFO:root:Command unrecognized. OUTPUT MSG: ? g
+
+INFO:root:Input message:                                 self.t? outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.t?
+
+INFO:root:Input message: ransport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ransport.write(outmsg)
+
+INFO:root:Input message:                                 logging.info("Command unrecognized. OUTPUT MSG: " +outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.info("Command
+
+INFO:root:Input message:                 except IndexError:
+INFO:root:Command unrecognized. OUTPUT MSG: ? except
+
+INFO:root:Input message:                         self.transport.write("?\n")
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.transport.write("?\n")
+
+INFO:root:Input message:                         logging.info("Empty message. OUTPUT MSG: ?\n")
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.info("Empty
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         #Process 'AT' message
+INFO:root:Command unrecognized. OUTPUT MSG: ? #Process
+
+INFO:root:Input message:         def processAT(self, data):
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message:                 try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? try:
+
+INFO:root:Input message:                         timediff = data[1? self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? timediff
+
+INFO:root:Input message: ? logging.info("Command
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? except
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? self.transport.write("?\n")
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? logging.info("Empty
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #Process
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ]
+INFO:root:Command unrecognized. OUTPUT MSG: ? ]
+
+INFO:root:Input message:                         server = data[2]
+INFO:root:Command unrecognized. OUTPUT MSG: ? server
+
+INFO:root:Input message:                         clientID = dat? timediff
+INFO:root:Command unrecognized. OUTPUT MSG: ? clientID
+
+INFO:root:Input message: a[3]
+INFO:root:Command unrecognized. OUTPUT MSG: ? a[3]
+
+INFO:root:Input message:                         location = data[4]
+INFO:root:Command unrecognized. OUTPUT MSG: ? location
+
+INFO:root:Input message:                         time_stamp = data[5]
+INFO:root:Command unrecognized. OUTPUT MSG: ? time_stamp
+
+INFO:root:Input message:                         #check if data exists and is the same
+INFO:root:Command unrecognized. OUTPUT MSG: ? #check
+
+INFO:root:Input message:                         if self.database.has_key(clientI? server
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message: ? clientID
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? location
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? time_stamp
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #check
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: D):
+INFO:root:Command unrecognized. OUTPUT MSG: ? D):
+
+INFO:root:Input message:                                 if time_stamp == self.databa? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message: se[clientID]['time_in']:
+INFO:root:Command unrecognized. OUTPUT MSG: ? se[clientID]['time_in']:
+
+INFO:root:Input message:                                         if location == self.database[clientID]['loc_']:
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message:                                                 return
+INFO:root:Command unrecognized. OUTPUT MSG: ? return
+
+INFO:root:Input message:                         #update because data is not the same
+INFO:root:Command unrecognized. OUTPUT MSG: ? #update
+
+INFO:root:Input message:                         outmsg = 'AT ' + timediff + ' ' + server + ' ' + clientID + ' ' + location + ' ' + time_stamp + '\n'
+INFO:root:Command unrecognized. OUTPUT MSG: ? outmsg
+
+INFO:root:Input message:                         lat, long = self._getLatLong(locat? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? lat,
+
+INFO:root:Input message: ? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #update
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ion)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ion)
+
+INFO:root:Input message:                         client_dict = {'Server_ID': server, 'time_in': t? lat,
+INFO:root:Command unrecognized. OUTPUT MSG: ? client_dict
+
+INFO:root:Input message: ime_stamp, 'loc_': location ,'at_msg': outmsg, '_lat': lat, '_long': long}
+INFO:root:Command unrecognized. OUTPUT MSG: ? ime_stamp,
+
+INFO:root:Input message:                         self.database[clientID] = client_dict
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.database[clientID]
+
+INFO:root:Input message:                 ? client_dict
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? self.database[clientID]
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                         #send to other servers
+INFO:root:Command unrecognized. OUTPUT MSG: ? #send
+
+INFO:root:Input message:                         self._r?
+INFO:root:Command unrecognized. OUTPUT MSG: ? self._r?
+
+INFO:root:Input message: eceived = outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? eceived
+
+INFO:root:Input message:                         factory = protocol.C? #send
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory
+
+INFO:root:Input message: ? self._received
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: lientFactory()
+INFO:root:Command unrecognized. OUTPUT MSG: ? lientFactory()
+
+INFO:root:Input message:                         factory.protocol = ClientProtocol
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory.protocol
+
+INFO:root:Input message:                         fa? factory
+INFO:root:Command unrecognized. OUTPUT MSG: ? fa?
+
+INFO:root:Input message: ? factory.protocol
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ctory.originator = self
+INFO:root:Command unrecognized. OUTPUT MSG: ? ctory.originator
+
+INFO:root:Input message:                         reactor.connectTCP('localhost', 12781, factory)
+INFO:root:Command unrecognized. OUTPUT MSG: ? reactor.connectTCP('localhost',
+
+INFO:root:Input message:                         reactor.connectTCP('? factory.originator
+INFO:root:Command unrecognized. OUTPUT MSG: ? reactor.connectTCP('?
+
+INFO:root:Input message: ? reactor.connectTCP('localhost',
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: localhost', 12783, factory)
+INFO:root:Command unrecognized. OUTPUT MSG: ? localhost',
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 except IndexError:
+INFO:root:Command unrecognized. OUTPUT MSG: ? except
+
+INFO:root:Input message:                         outmsg = "?" + " " + da? reactor.connectTCP('localhost',
+INFO:root:Command unrecognized. OUTPUT MSG: ? outmsg
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ta[0] + "\n"
+INFO:root:Command unrecognized. OUTPUT MSG: ? ta[0]
+
+INFO:root:Input message:                         #self.transport.write(o? except
+INFO:root:Command unrecognized. OUTPUT MSG: ? #self.transport.write(o?
+
+INFO:root:Input message: ? outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: utmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? utmsg)
+
+INFO:root:Input message:                         logging.info("Command unrecogn? #self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.info("Command
+
+INFO:root:Input message: ized. OUTPUT MSG: " +outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ized.
+
+INFO:root:Input message:         #Process 'IAMAT' message
+INFO:root:Command unrecognized. OUTPUT MSG: ? #Process
+
+INFO:root:Input message:         def processIAMAT(self, data):
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message:                 logging.info("Processing IAMA? logging.info("Command
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.info("Processing
+
+INFO:root:Input message: ? #Process
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: T message. ")
+INFO:root:Command unrecognized. OUTPUT MSG: ? T
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #get message componen? logging.info("Processing
+INFO:root:Command unrecognized. OUTPUT MSG: ? #get
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ts :: should check if it exists?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ts
+
+INFO:root:Input message:                 try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? try:
+
+INFO:root:Input message:                         clientID =? #get
+INFO:root:Command unrecognized. OUTPUT MSG: ? clientID
+
+INFO:root:Input message: ? try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:  data[1]
+INFO:root:Command unrecognized. OUTPUT MSG: ? data[1]
+
+INFO:root:Input message:                         print "ClientI? clientID
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message: D: " +str(data[1])
+INFO:root:Command unrecognized. OUTPUT MSG: ? D:
+
+INFO:root:Input message:                         location = data[2]
+INFO:root:Command unrecognized. OUTPUT MSG: ? location
+
+INFO:root:Input message:                         time_stamp = data[3]
+INFO:root:Command unrecognized. OUTPUT MSG: ? time_stamp
+
+INFO:root:Input message:                 except IndexError:
+INFO:root:Command unrecognized. OUTPUT MSG: ? except
+
+INFO:root:Input message:                         outm? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? outm?
+
+INFO:root:Input message: ? location
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? time_stamp
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? except
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: sg = "Error: Syntax is wrong."
+INFO:root:Command unrecognized. OUTPUT MSG: ? sg
+
+INFO:root:Input message:                         self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.transport.write(outmsg)
+
+INFO:root:Input message:                         logging.wa? outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.wa?
+
+INFO:root:Input message: ? self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: rning("Index Error. OUTPUT MSG: " +outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? rning("Index
+
+INFO:root:Input message:                         ? logging.warning("Index
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: return
+INFO:root:Command unrecognized. OUTPUT MSG: ? return
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #check if it exists
+INFO:root:Command unrecognized. OUTPUT MSG: ? #check
+
+INFO:root:Input message:                 if s? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #check
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: elf.database.has_key(clientID):
+INFO:root:Command unrecognized. OUTPUT MSG: ? elf.database.has_key(clientID):
+
+INFO:root:Input message:                         if time_stamp == self.database[clientID]['ti? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message: me_in']:
+INFO:root:Command unrecognized. OUTPUT MSG: ? me_in']:
+
+INFO:root:Input message:                         ? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:         if location == self.database[clientID]['loc_']:
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message:                                         print "It was in here already \n"
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message:                                         ? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: return
+INFO:root:Command unrecognized. OUTPUT MSG: ? return
+
+INFO:root:Input message:                 #? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? #?
+
+INFO:root:Input message: ? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: compute time difference
+INFO:root:Command unrecognized. OUTPUT MSG: ? compute
+
+INFO:root:Input message:                 try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? try:
+
+INFO:root:Input message:                         timediff = time() ? #compute
+INFO:root:Command unrecognized. OUTPUT MSG: ? timediff
+
+INFO:root:Input message: - float(time_stamp)
+INFO:root:Command unrecognized. OUTPUT MSG: ? -
+
+INFO:root:Input message:                         lat, long = self._get? try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? lat,
+
+INFO:root:Input message: ? timediff
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: LatLong(location)
+INFO:root:Command unrecognized. OUTPUT MSG: ? LatLong(location)
+
+INFO:root:Input message:                         print "time diff: " +str(timediff)
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message:                         print "location: " +str(location) + '\n'
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message:                         ? lat,
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: print "latiude: " +str(lat) + '\n'
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message:                         print "longitude: "+ str(? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message: long) + '\n'
+INFO:root:Command unrecognized. OUTPUT MSG: ? long)
+
+INFO:root:Input message:                 except:
+INFO:root:Command unrecognized. OUTPUT MSG: ? except:
+
+INFO:root:Input message:                         outmsg = "Error computing t? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? outmsg
+
+INFO:root:Input message: ? except:
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ime difference. Check that your command is in the proper format. \n"
+INFO:root:Command unrecognized. OUTPUT MSG: ? ime
+
+INFO:root:Input message:                         self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.transport.write(outmsg)
+
+INFO:root:Input message:                         retu? outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? retu?
+
+INFO:root:Input message: ? self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: rn
+INFO:root:Command unrecognized. OUTPUT MSG: ? rn
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #update database with client info
+INFO:root:Command unrecognized. OUTPUT MSG: ? #update
+
+INFO:root:Input message:                 outmsg = "AT " "%+f" %(timediff) + " " + self.name  + "? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? outmsg
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #update
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:  " + clientID + " " + str(location)+ " " + str(time_stamp) + "\n"
+INFO:root:Command unrecognized. OUTPUT MSG: ? "
+
+INFO:root:Input message:                 client_dict = {'Se? outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? client_dict
+
+INFO:root:Input message: rver_ID': self.name, 'time_in': time_stamp, 'loc_': location ,'at_msg': outmsg, '_lat': lat, '_long': long}
+INFO:root:Command unrecognized. OUTPUT MSG: ? rver_ID':
+
+INFO:root:Input message:                 self.database[clientID] = client_dict
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.database[clientID]
+
+INFO:root:Input message:                 print str(client_d? client_dict
+INFO:root:Command unrecognized. OUTPUT MSG: ? print
+
+INFO:root:Input message: ? self.database[clientID]
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ict) + '\n'
+INFO:root:Command unrecognized. OUTPUT MSG: ? ict)
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #send to other servers where the ? print
+INFO:root:Command unrecognized. OUTPUT MSG: ? #send
+
+INFO:root:Input message: number is the port of what is needed to be sent
+INFO:root:Command unrecognized. OUTPUT MSG: ? number
+
+INFO:root:Input message:                 self._rec?
+INFO:root:Command unrecognized. OUTPUT MSG: ? self._rec?
+
+INFO:root:Input message: ? #send
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: eived = outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? eived
+
+INFO:root:Input message:                 factory = protocol.ClientFactory()
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory
+
+INFO:root:Input message:                 factory.protocol = ? self._received
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory.protocol
+
+INFO:root:Input message: ClientProtocol
+INFO:root:Command unrecognized. OUTPUT MSG: ? ClientProtocol
+
+INFO:root:Input message:                 factory.originator = se? factory
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory.originator
+
+INFO:root:Input message: lf
+INFO:root:Command unrecognized. OUTPUT MSG: ? lf
+
+INFO:root:Input message:                 reactor.connectTCP('localhost', 1? factory.protocol
+INFO:root:Command unrecognized. OUTPUT MSG: ? reactor.connectTCP('localhost',
+
+INFO:root:Input message: ? factory.originator
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: 2781, factory)
+INFO:root:Command unrecognized. OUTPUT MSG: ? 2781,
+
+INFO:root:Input message:                 reactor.connectTCP('localhost', 12783, factory)
+INFO:root:Command unrecognized. OUTPUT MSG: ? reactor.connectTCP('localhost',
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #output response message
+INFO:root:Command unrecognized. OUTPUT MSG: ? #output
+
+INFO:root:Input message: ? reactor.connectTCP('localhost',
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? reactor.connectTCP('localhost',
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:                 self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.transport.write(outmsg)
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         def forwar?
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message: ? #output
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: dLine(self, recipient):
+INFO:root:Command unrecognized. OUTPUT MSG: ? dLine(self,
+
+INFO:root:Input message:                 recipient.sendLine(self._rece? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? recipient.sendLine(self._rece?
+
+INFO:root:Input message: ived)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ived)
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         #Process 'WHATSAT' message
+INFO:root:Command unrecognized. OUTPUT MSG: ? #Process
+
+INFO:root:Input message:         def processWHA? recipient.sendLine(self._received)
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #Process
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: TSAT(self, data):
+INFO:root:Command unrecognized. OUTPUT MSG: ? TSAT(self,
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #get message components
+INFO:root:Command unrecognized. OUTPUT MSG: ? #get
+
+INFO:root:Input message:                 try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? try:
+
+INFO:root:Input message:                         clientID = dat? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? clientID
+
+INFO:root:Input message: a[1]
+INFO:root:Command unrecognized. OUTPUT MSG: ? a[1]
+
+INFO:root:Input message:                         radius = data[2]
+INFO:root:Command unrecognized. OUTPUT MSG: ? radius
+
+INFO:root:Input message:                         max_tweets = data[3]
+INFO:root:Command unrecognized. OUTPUT MSG: ? max_tweets
+
+INFO:root:Input message:                         if int(max_twe?
+INFO:root:Command unrecognized. OUTPUT MSG: ? if
+
+INFO:root:Input message: ? #get
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? clientID
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? radius
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? max_tweets
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ets) > 100:
+INFO:root:Command unrecognized. OUTPUT MSG: ? ets)
+
+INFO:root:Input message:                                 max_tweets = str(100)
+INFO:root:Command unrecognized. OUTPUT MSG: ? max_tweets
+
+INFO:root:Input message:                                 self.transport.write("Max results = 100, setting ma? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.transport.write("Max
+
+INFO:root:Input message: ? max_tweets
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: x_tweets to 100. \n")
+INFO:root:Command unrecognized. OUTPUT MSG: ? x_tweets
+
+INFO:root:Input message:                 except IndexError:
+INFO:root:Command unrecognized. OUTPUT MSG: ? except
+
+INFO:root:Input message:                         s? self.transport.write("Max
+INFO:root:Command unrecognized. OUTPUT MSG: ? s?
+
+INFO:root:Input message: ? except
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: elf.transport.write("Error: Syntax incorrect for WHATSAT")
+INFO:root:Command unrecognized. OUTPUT MSG: ? elf.transport.write("Error:
+
+INFO:root:Input message:                         return
+INFO:root:Command unrecognized. OUTPUT MSG: ? return
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #if client exists, query twitter
+INFO:root:Command unrecognized. OUTPUT MSG: ? #if
+
+INFO:root:Input message:                 if? self.transport.write("Error:
+INFO:root:Command unrecognized. OUTPUT MSG: ? if?
+
+INFO:root:Input message:  self.database.has_key(clientID):
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.database.has_key(clientID):
+
+INFO:root:Input message:                         self.t? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.t?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #if
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? if
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ransport.write(self.database[clientID]['at_msg'])
+INFO:root:Command unrecognized. OUTPUT MSG: ? ransport.write(self.database[clientID]['at_msg'])
+
+INFO:root:Input message:                         dfrd = self._queryTwitter(clientID, radius, max_tweets)
+INFO:root:Command unrecognized. OUTPUT MSG: ? dfrd
+
+INFO:root:Input message: ? self.transport.write(self.database[clientID]['at_msg'])
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:                         dfrd.addCallback(sel? dfrd
+INFO:root:Command unrecognized. OUTPUT MSG: ? dfrd.addCallback(sel?
+
+INFO:root:Input message: f._handleQueryResult)
+INFO:root:Command unrecognized. OUTPUT MSG: ? f._handleQueryResult)
+
+INFO:root:Input message:                         dfrd.addErrback(self._handleQueryFailure)
+INFO:root:Command unrecognized. OUTPUT MSG: ? dfrd.addErrback(self._handleQueryFailure)
+
+INFO:root:Input message:                         #lat,? dfrd.addCallback(self._handleQueryResult)
+INFO:root:Command unrecognized. OUTPUT MSG: ? #lat,?
+
+INFO:root:Input message: ? dfrd.addErrback(self._handleQueryFailure)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:  long = self._getLatLong(location)
+INFO:root:Command unrecognized. OUTPUT MSG: ? long
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                         #dfrd = self.? #lat,
+INFO:root:Command unrecognized. OUTPUT MSG: ? #dfrd
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: _queryTwitter(clientID, radius, max_tweets)
+INFO:root:Command unrecognized. OUTPUT MSG: ? _queryTwitter(clientID,
+
+INFO:root:Input message:                         #dfrd.ad? #dfrd
+INFO:root:Command unrecognized. OUTPUT MSG: ? #dfrd.ad?
+
+INFO:root:Input message: dCallback(self._handleQueryResult)
+INFO:root:Command unrecognized. OUTPUT MSG: ? dCallback(self._handleQueryResult)
+
+INFO:root:Input message:                         #dfrd.addErrBack(se? #dfrd.addCallback(self._handleQueryResult)
+INFO:root:Command unrecognized. OUTPUT MSG: ? #dfrd.addErrBack(se?
+
+INFO:root:Input message: lf._handlQueryFailure)
+INFO:root:Command unrecognized. OUTPUT MSG: ? lf._handlQueryFailure)
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 #client doesn't exist in database
+INFO:root:Command unrecognized. OUTPUT MSG: ? #client
+
+INFO:root:Input message:                 e? #dfrd.addErrBack(self._handlQueryFailure)
+INFO:root:Command unrecognized. OUTPUT MSG: ? e?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? #client
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: lse:
+INFO:root:Command unrecognized. OUTPUT MSG: ? lse:
+
+INFO:root:Input message:                         outmsg ="No information found for clie? else:
+INFO:root:Command unrecognized. OUTPUT MSG: ? outmsg
+
+INFO:root:Input message: nt %s\n" %clientID
+INFO:root:Command unrecognized. OUTPUT MSG: ? nt
+
+INFO:root:Input message:                         self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.transport.write(outmsg)
+
+INFO:root:Input message:                 retur? outmsg
+INFO:root:Command unrecognized. OUTPUT MSG: ? retur?
+
+INFO:root:Input message: ? self.transport.write(outmsg)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: n
+INFO:root:Command unrecognized. OUTPUT MSG: ? n
+
+INFO:root:Input message:         def _queryTwitter(self, clientID, radius, max_tweets):
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message:                 ? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: d = defer.Deferred()
+INFO:root:Command unrecognized. OUTPUT MSG: ? d
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         ? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? d
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:         lat = str(float(self.database[clientID?
+INFO:root:Command unrecognized. OUTPUT MSG: ? lat
+
+INFO:root:Input message: ]['_lat']))
+INFO:root:Command unrecognized. OUTPUT MSG: ? ]['_lat']))
+
+INFO:root:Input message:                 long = str(float(self.database[clientID]['_long']))
+INFO:root:Command unrecognized. OUTPUT MSG: ? long
+
+INFO:root:Input message:                 query = "http? lat
+INFO:root:Command unrecognized. OUTPUT MSG: ? query
+
+INFO:root:Input message: ://sea? long
+INFO:root:Command unrecognized. OUTPUT MSG: ? ://sea?
+
+INFO:root:Input message: rch.twitter.com/search.json?q=&geocode=" + lat + "," + long + "," + radius + "km&rpp=" + max_tweets +"&page=1"
+INFO:root:Command unrecognized. OUTPUT MSG: ? rch.twitter.com/search.json?q=&geocode="
+
+INFO:root:Input message:                 con? query
+INFO:root:Command unrecognized. OUTPUT MSG: ? con?
+
+INFO:root:Input message: n = httplib.HTTPConnection("www.twitter.com")
+INFO:root:Command unrecognized. OUTPUT MSG: ? n
+
+INFO:root:Input message:                 conn.request(? conn
+INFO:root:Command unrecognized. OUTPUT MSG: ? conn.request(?
+
+INFO:root:Input message: "GET", query)
+INFO:root:Command unrecognized. OUTPUT MSG: ? "GET",
+
+INFO:root:Input message:                 response = conn.getresponse()
+INFO:root:Command unrecognized. OUTPUT MSG: ? response
+
+INFO:root:Input message:                 query_result = respons? conn.request("GET",
+INFO:root:Command unrecognized. OUTPUT MSG: ? query_result
+
+INFO:root:Input message: ? response
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: e.read()
+INFO:root:Command unrecognized. OUTPUT MSG: ? e.read()
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:                 d.callback(query_result)
+INFO:root:Command unrecognized. OUTPUT MSG: ? d.callback(query_result)
+
+INFO:root:Input message:                 return d
+INFO:root:Command unrecognized. OUTPUT MSG: ? return
+
+INFO:root:Input message: ? query_result
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? d.callback(query_result)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:         def _handleQueryResult(self, query_result):
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message:                 self.transport.write(query_result)
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.transport.write(query_result)
+
+INFO:root:Input message:                 ? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: logging.info("Query success? self.transport.write(query_result)
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.info("Query
+
+INFO:root:Input message: ful. OUTPUT: " +query_result)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ful.
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         def _handl? logging.info("Query
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: eQueryFailure(self, query_failure):
+INFO:root:Command unrecognized. OUTPUT MSG: ? eQueryFailure(self,
+
+INFO:root:Input message:                 self.t? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.t?
+
+INFO:root:Input message: ransport.write("Error in Twitter query.\n")
+INFO:root:Command unrecognized. OUTPUT MSG: ? ransport.write("Error
+
+INFO:root:Input message:                 logging.error("Err? self.transport.write("Error
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.error("Err?
+
+INFO:root:Input message: back. OUTPUT: Error in Twitter query.\n")
+INFO:root:Command unrecognized. OUTPUT MSG: ? back.
+
+INFO:root:Input message:                 query_failure.trap(RuntimeError)
+INFO:root:Command unrecognized. OUTPUT MSG: ? query_failure.trap(RuntimeError)
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message:         def _getLatLong(sel? logging.error("Errback.
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message: ? query_failure.trap(RuntimeError)
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: f, lo?
+INFO:root:Command unrecognized. OUTPUT MSG: ? f,
+
+INFO:root:Input message: cation):
+INFO:root:Command unrecognized. OUTPUT MSG: ? cation):
+
+INFO:root:Input message:                 try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? try:
+
+INFO:root:Input message:                         m = PATTERN.match(location)
+INFO:root:Command unrecognized. OUTPUT MSG: ? m
+
+INFO:root:Input message:                         latitude = m.group(1)
+INFO:root:Command unrecognized. OUTPUT MSG: ? latitude
+
+INFO:root:Input message: ? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:                         lon? try:
+INFO:root:Command unrecognized. OUTPUT MSG: ? lon?
+
+INFO:root:Input message: gitude = m.? m
+INFO:root:Command unrecognized. OUTPUT MSG: ? gitude
+
+INFO:root:Input message: ? latitude
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: group(2)
+INFO:root:Command unrecognized. OUTPUT MSG: ? group(2)
+
+INFO:root:Input message:                         retu? longitude
+INFO:root:Command unrecognized. OUTPUT MSG: ? retu?
+
+INFO:root:Input message: rn latitude, longitude
+INFO:root:Command unrecognized. OUTPUT MSG: ? rn
+
+INFO:root:Input message:                 excep? return
+INFO:root:Command unrecognized. OUTPUT MSG: ? excep?
+
+INFO:root:Input message: t:
+INFO:root:Command unrecognized. OUTPUT MSG: ? t:
+
+INFO:root:Input message:                         se? except:
+INFO:root:Command unrecognized. OUTPUT MSG: ? se?
+
+INFO:root:Input message: lf.transport("Error parsing location coordinates")
+INFO:root:Command unrecognized. OUTPUT MSG: ? lf.transport("Error
+
+INFO:root:Input message:                         logging.warning? self.transport("Error
+INFO:root:Command unrecognized. OUTPUT MSG: ? logging.warning?
+
+INFO:root:Input message: ("OUTPUT MSG: Error parsing location coordinates")
+INFO:root:Command unrecognized. OUTPUT MSG: ? ("OUTPUT
+
+INFO:root:Input message: #$$ ? logging.warning("OUTPUT
+INFO:root:Command unrecognized. OUTPUT MSG: ? #$$
+
+INFO:root:Input message: END class Message Receiver
+INFO:root:Command unrecognized. OUTPUT MSG: ? END
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: class Clien? #$$
+INFO:root:Command unrecognized. OUTPUT MSG: ? class
+
+INFO:root:Input message: tProtoc?
+INFO:root:Command unrecognized. OUTPUT MSG: ? tProtoc?
+
+INFO:root:Input message: ol(basic.LineReceiver):
+INFO:root:Command unrecognized. OUTPUT MSG: ? ol(basic.LineReceiver):
+
+INFO:root:Input message:         def conn? class
+INFO:root:Command unrecognized. OUTPUT MSG: ? def
+
+INFO:root:Input message: ectionMade(self):
+INFO:root:Command unrecognized. OUTPUT MSG: ? ectionMade(self):
+
+INFO:root:Input message:                 self.factory.? def
+INFO:root:Command unrecognized. OUTPUT MSG: ? self.factory.?
+
+INFO:root:Input message: originator.forwardLine(self)
+INFO:root:Command unrecognized. OUTPUT MSG: ? originator.forwardLine(self)
+
+INFO:root:Input message:                 s? self.factory.originator.forwardLine(self)
+INFO:root:Command unrecognized. OUTPUT MSG: ? s?
+
+INFO:root:Input message: elf.transport.loseConnection()
+INFO:root:Command unrecognized. OUTPUT MSG: ? elf.transport.loseConnection()
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: #$$ End class? self.transport.loseConnection()
+INFO:root:Command unrecognized. OUTPUT MSG: ? #$$
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message:  CLientProtocol
+INFO:root:Command unrecognized. OUTPUT MSG: ? CLientProtocol
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: factory = protocol.ServerFactory()
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory
+
+INFO:root:Input message: factory.protocol = MessageReceiver
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory.protocol
+
+INFO:root:Input message: factory.clients = []
+INFO:root:Command unrecognized. OUTPUT MSG: ? factory.clients
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: application = service.Application("Server")
+INFO:root:Command unrecognized. OUTPUT MSG: ? application
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: internet.TCPServer(PORT, factory).setServiceParent(application)
+INFO:root:Command unrecognized. OUTPUT MSG: ? internet.TCPServer(PORT,
+
+INFO:root:Input message: ? #$$
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? factory
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? factory.protocol
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? factory.clients
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? application
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: ? internet.TCPServer(PORT,
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: ^C}^]
+INFO:root:Command unrecognized. OUTPUT MSG: ? ^C}^]
+
+INFO:root:Input message: telnet> ^CConnection closed.
+INFO:root:Command unrecognized. OUTPUT MSG: ? telnet>
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12784
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: telnet: connect to address 127.0.0.1: Connection refused
+INFO:root:Command unrecognized. OUTPUT MSG: ? telnet:
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12783
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.007,"max_id":274189764461223936,"max_id_str":"274189764461223936","next_page":"?page=2&max_id=274189764461223936&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274189764461223936&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:35:08 +0000","from_user":"geeallenxo","from_user_id":531678972,"from_user_id_str":"531678972","from_user_name":"georgina","geo":null,"location":"LDN.","id":274189764461223936,"id_str":"274189764461223936","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2830777708\/1ef78fa7dc78792b52e221aeff756cfd_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2830777708\/1ef78fa7dc78792b52e221aeff756cfd_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/download\/iphone&quot;&gt;Twitter for iPhone&lt;\/a&gt;","text":"@tmouse_ made mine and @michaelthum english lesson so much better today. nice videos \ud83d\ude02\ud83d\ude06","to_user":"tmouse_","to_user_id":409568627,"to_user_id_str":"409568627","to_user_name":"t-mouse"},{"created_at":"Thu, 29 Nov 2012 16:35:08 +0000","from_user":"Realkhabar","from_user_id":527003328,"from_user_id_str":"527003328","from_user_name":"Realkhabar","geo":null,"location":"Kathmandu,Nepal","id":274189764230537218,"id_str":"274189764230537218","iso_language_code":"ne","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2049683337\/realkhabar_normal.jpg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2049683337\/realkhabar_normal.jpg","source":"&lt;a href=&quot;http:\/\/twitter.com\/tweetbutton&quot;&gt;Tweet Button&lt;\/a&gt;","text":"\u0928\u0947\u0935\u093e \u0938\u092e\u093e\u091c, \u0938\u093e\u0909\u0925\u0930\u094d\u0928 \u0915\u094d\u092f\u093e\u0932\u093f\u092b\u094b\u0930\u094d\u0928\u093f\u092f\u093e \u091a\u094d\u092f\u093e\u092a\u094d\u091f\u0930\u0915\u094b \u0930\u0915\u094d\u0924\u0926\u093e\u0928 | http:\/\/t.co\/Gg8YnfpM","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: {"completed_in":0.011,"max_id":274187913590370304,"max_id_str":"274187913590370304","next_page":"?page=2&max_id=274187913590370304&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274187913590370304&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:27:47 +0000","from_user":"nawa06","from_user_id":417757535,"from_user_id_str":"417757535","from_user_name":"SaanDaaju","geo":null,"location":"kathmandu, Nepal","id":274187913590370304,"id_str":"274187913590370304","iso_language_code":"hi","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/1665511850\/nawraj_normal.jpg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/1665511850\/nawraj_normal.jpg","source":"&lt;a href=&quot;http:\/\/twitter.com\/download\/iphone&quot;&gt;Twitter for iPhone&lt;\/a&gt;","text":"\u0906\u092f\u094b","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null},{"created_at":"Thu, 29 Nov 2012 16:27:46 +0000","from_user":"SUNAO_","from_user_id":70675887,"from_user_id_str":"70675887","from_user_name":"\u3059\u306a\u304a\uff08\u30de\u30a4\u30af\u30e9\u9bd6\u3084\u3063\u3066\u307e\u3059\uff09","geo":{"coordinates":[27.985818,86.923580],"type":"Point"},"id":274187911203782657,"id_str":"274187911203782657","iso_language_code":"ja","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2738351531\/0ed944cf1f6779090033ece765bcb750_normal.png","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2738351531\/0ed944cf1f6779090033ece765bcb750_normal.png","source":"&lt;a href=&quot;http:\/\/twitter.com\/intent\/tweet?text=%e3%81%af%e3%81%81%e6%97%a9%e8%8b%97%e3%81%95%e3%82%93%e3%81%8b%e3%82%8f%e3%82%86&quot;&gt;\u3055\u306a\u3048\u3042\u3044\u3057\u3066\u308b&lt;\/a&gt;","text":"\u3082\u3045\u3049\u3053\u3063\u305f","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}^C^]
+INFO:root:Command unrecognized. OUTPUT MSG: ? {"completed_in":0.011,"max_id":274187913590370304,"max_id_str":"274187913590370304","next_page":"?page=2&max_id=274187913590370304&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274187913590370304&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu,
+
+INFO:root:Input message: telnet> Connection closed.
+INFO:root:Command unrecognized. OUTPUT MSG: ? telnet>
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12782
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu
+INFO:root:Input message: Error: Syntax incorrect for WHATSAT
+INFO:root:Command unrecognized. OUTPUT MSG: ? Error:
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.055,"max_id":274189764461223936,"max_id_str":"274189764461223936","next_page":"?page=2&max_id=274189764461223936&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274189764461223936&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:35:08 +0000","from_user":"geeallenxo","from_user_id":531678972,"from_user_id_str":"531678972","from_user_name":"georgina","geo":null,"location":"LDN.","id":274189764461223936,"id_str":"274189764461223936","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2830777708\/1ef78fa7dc78792b52e221aeff756cfd_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2830777708\/1ef78fa7dc78792b52e221aeff756cfd_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/download\/iphone&quot;&gt;Twitter for iPhone&lt;\/a&gt;","text":"@tmouse_ made mine and @michaelthum english lesson so much better today. nice videos \ud83d\ude02\ud83d\ude06","to_user":"tmouse_","to_user_id":409568627,"to_user_id_str":"409568627","to_user_name":"t-mouse"},{"created_at":"Thu, 29 Nov 2012 16:35:08 +0000","from_user":"Realkhabar","from_user_id":527003328,"from_user_id_str":"527003328","from_user_name":"Realkhabar","geo":null,"location":"Kathmandu,Nepal","id":274189764230537218,"id_str":"274189764230537218","iso_language_code":"ne","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2049683337\/realkhabar_normal.jpg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2049683337\/realkhabar_normal.jpg","source":"&lt;a href=&quot;http:\/\/twitter.com\/tweetbutton&quot;&gt;Tweet Button&lt;\/a&gt;","text":"\u0928\u0947\u0935\u093e \u0938\u092e\u093e\u091c, \u0938\u093e\u0909\u0925\u0930\u094d\u0928 \u0915\u094d\u092f\u093e\u0932\u093f\u092b\u094b\u0930\u094d\u0928\u093f\u092f\u093e \u091a\u094d\u092f\u093e\u092a\u094d\u091f\u0930\u0915\u094b \u0930\u0915\u094d\u0924\u0926\u093e\u0928 | http:\/\/t.co\/Gg8YnfpM","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: {"completed_in":0.023,"max_id":274188244357365760,"max_id_str":"274188244357365760","next_page":"?page=2&max_id=274188244357365760&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274188244357365760&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:29:06 +0000","from_user":"anantabrt","from_user_id":141220687,"from_user_id_str":"141220687","from_user_name":"Ananta Koirala","geo":null,"location":"Kathmandu","id":274188244357365760,"id_str":"274188244357365760","iso_language_code":"ne","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2886466099\/563da81b48aa6dd98a5852ffab085ac5_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2886466099\/563da81b48aa6dd98a5852ffab085ac5_normal.jpeg","source":"&lt;a href=&quot;http:\/\/www.tweetdeck.com&quot;&gt;TweetDeck&lt;\/a&gt;","text":"@sahiladai \u0905\u0917\u093f \u0926\u0947\u0916\u093f \u092d\u0928\u093f\u0930\u093e'\u091b\u0941 \u0924 ;-) \u091c\u0928\u094d\u0924\u0940 \u091c\u093e\u0928\u0947 \u092c\u0947\u0932\u093e \u0915\u093e\u0930\u094d\u0921 \u092a\u0920\u093e\u092e\u094d\u0932\u093e :P @risihs @baabajee","to_user":"sahiladai","to_user_id":285989904,"to_user_id_str":"285989904","to_user_name":"\u0938\u093e\u0939\u093f\u0902\u0932\u093e\u0926\u093e\u0907","in_reply_to_status_id":274188025485991936,"in_reply_to_status_id_str":"274188025485991936"},{"created_at":"Thu, 29 Nov 2012 16:29:05 +0000","from_user":"Frank_Bags","from_user_id":467949165,"from_user_id_str":"467949165","from_user_name":"CH\u00a3\u00a3S\u00a3 Bags","geo":null,"location":"LDN","id":274188241463279617,"id_str":"274188241463279617","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2754897161\/94e3d2c542a68fd91526618f3de8b0da_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2754897161\/94e3d2c542a68fd91526618f3de8b0da_normal.jpeg","source":"&lt;a href=&quot;http:\/\/blackberry.com\/twitter&quot;&gt;Twitter for BlackBerry\u00ae&lt;\/a&gt;","text":"@NikoNjc you can play semi-pro and get a bit of extra cash","to_user":"NikoNjc","to_user_id":464040136,"to_user_id_str":"464040136","to_user_name":"Cold","in_reply_to_status_id":274187789241810948,"in_reply_to_status_id_str":"274187789241810948"}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Command unrecognized. OUTPUT MSG: ? {"completed_in":0.023,"max_id":274188244357365760,"max_id_str":"274188244357365760","next_page":"?page=2&max_id=274188244357365760&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274188244357365760&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu,
+
+INFO:root:Input message: ?
+INFO:root:Command unrecognized. OUTPUT MSG: ? ?
+
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 1343242 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.072,"max_id":274189779015462912,"max_id_str":"274189779015462912","next_page":"?page=2&max_id=274189779015462912&q=&geocode=27.5916%2C86.564%2C1343242km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274189779015462912&q=&geocode=27.5916%2C86.564%2C1343242km","results":[{"created_at":"Thu, 29 Nov 2012 16:35:12 +0000","from_user":"ismairfan1","from_user_id":554486768,"from_user_id_str":"554486768","from_user_name":"isma irfan","geo":null,"location":"lahore","id":274189779015462912,"id_str":"274189779015462912","iso_language_code":"tl","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2882789420\/901153dceaf872d3273171457ed895fe_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2882789420\/901153dceaf872d3273171457ed895fe_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/&quot;&gt;web&lt;\/a&gt;","text":"@Sexsaur Shataaap!","to_user":"Sexsaur","to_user_id":146126113,"to_user_id_str":"146126113","to_user_name":"~ Zeeshan (Hai)der ~","in_reply_to_status_id":274189355726303232,"in_reply_to_status_id_str":"274189355726303232"},{"created_at":"Thu, 29 Nov 2012 16:35:11 +0000","from_user":"SheMoansKaylin","from_user_id":259311980,"from_user_id_str":"259311980","from_user_name":"Kaylin Edwards\u2122","geo":null,"location":"SinCitayy","id":274189778201739264,"id_str":"274189778201739264","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2709178320\/0c0b869c28c42002a9f25a072698513b_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2709178320\/0c0b869c28c42002a9f25a072698513b_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/devices&quot;&gt;txt&lt;\/a&gt;","text":"RT @SheMoansCasey: I wanna throw up.... :\/","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Input message: {"completed_in":0.021,"max_id":274188318487490560,"max_id_str":"274188318487490560","next_page":"?page=2&max_id=274188318487490560&q=&geocode=27.5916%2C86.564%2C1343242km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274188318487490560&q=&geocode=27.5916%2C86.564%2C1343242km","results":[{"created_at":"Thu, 29 Nov 2012 16:29:23 +0000","from_user":"valnogueira_","from_user_id":485893578,"from_user_id_str":"485893578","from_user_name":"val nogueira","geo":null,"location":"ali \u00f3  -","id":274188318487490560,"id_str":"274188318487490560","iso_language_code":"pt","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2879831776\/0f6a33832c52d5b3347b665f3013ba5a_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2879831776\/0f6a33832c52d5b3347b665f3013ba5a_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/&quot;&gt;web&lt;\/a&gt;","text":"assim que tu v\u00ea as amizades, as pinta acham que a gente t\u00e1 dormindo, acham ...","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null},{"created_at":"Thu, 29 Nov 2012 16:29:23 +0000","from_user":"kyounes92","from_user_id":553477352,"from_user_id_str":"553477352","from_user_name":"khaled younes","geo":null,"location":"Dubai","id":274188318445551616,"id_str":"274188318445551616","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2659427912\/07dd459258717a1b9c8180704721693b_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2659427912\/07dd459258717a1b9c8180704721693b_normal.jpeg","source":"&lt;a href=&quot;http:\/\/blackberry.com\/twitter&quot;&gt;Twitter for BlackBerry\u00ae&lt;\/a&gt;","text":"RT @ItsFunnyLife: I wish I could go back to the day I met you...and walk the hell away.","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}^CConnection closed by foreign host.
+INFO:root:Command unrecognized. OUTPUT MSG: ? {"completed_in":0.021,"max_id":274188318487490560,"max_id_str":"274188318487490560","next_page":"?page=2&max_id=274188318487490560&q=&geocode=27.5916%2C86.564%2C1343242km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274188318487490560&q=&geocode=27.5916%2C86.564%2C1343242km","results":[{"created_at":"Thu,
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: [keny@lnxsrv04 ~]$ telnet localhost 12780
+INFO:root:Command unrecognized. OUTPUT MSG: ? [keny@lnxsrv04
+
+INFO:root:Input message: Trying 127.0.0.1...
+INFO:root:Command unrecognized. OUTPUT MSG: ? Trying
+
+INFO:root:Input message: Connected to localhost.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Connected
+
+INFO:root:Input message: Escape character is '^]'.
+INFO:root:Command unrecognized. OUTPUT MSG: ? Escape
+
+INFO:root:Input message: ^C^[}{^]
+INFO:root:Command unrecognized. OUTPUT MSG: ? ^C^[}{^]
+
+INFO:root:Input message: telnet> ^V^M^
+INFO:root:Command unrecognized. OUTPUT MSG: ? telnet>
+
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.02,"max_id":274190124076654592,"max_id_str":"274190124076654592","next_page":"?page=2&max_id=274190124076654592&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274190124076654592&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:36:34 +0000","from_user":"SWiKRiTiB","from_user_id":144764788,"from_user_id_str":"144764788","from_user_name":"Swikriti Bashyal","geo":null,"location":"Nepal,Kathmandu","id":274190124076654592,"id_str":"274190124076654592","iso_language_code":"ne","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2856198531\/8e8fd206352ccd43ceaf374af2793c2e_normal.png","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2856198531\/8e8fd206352ccd43ceaf374af2793c2e_normal.png","source":"&lt;a href=&quot;http:\/\/twitter.com\/&quot;&gt;web&lt;\/a&gt;","text":"RT @ekaamnepali: \u092e\u093e\u0928\u094d\u091b\u0947 \u0939\u0930\u0941 #bored :( \u0932\u0947\u0916\u0947\u0915\u094b \u092a\u0928\u093f \u092b\u0947\u092d\u0930\u0947\u091f \u0917\u0930\u094d\u0926\u093e \u0930\u0948\u091b\u0928","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null},{"created_at":"Thu, 29 Nov 2012 16:36:34 +0000","from_user":"gyanaryal","from_user_id":341887823,"from_user_id_str":"341887823","from_user_name":"gyan","geo":null,"location":"kathmandu, nepal","id":274190123938222080,"id_str":"274190123938222080","iso_language_code":"ne","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2834325300\/fe4e95b9f8916f5ae388324308a2bdb7_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2834325300\/fe4e95b9f8916f5ae388324308a2bdb7_normal.jpeg","source":"&lt;a href=&quot;http:\/\/twitter.com\/&quot;&gt;web&lt;\/a&gt;","text":"@BiswasNeupane1 @anjansapkota \u092e\u0941\u0938\u094b \u0905\u0932\u094d\u091b\u093f \u0939\u0941\u0928\u094d\u091b,, \u092e\u0941\u0938\u0940 \u0932\u0947 \u0906\u0939\u0930 \u092c\u093f\u0939\u093e\u0930 \u0916\u094b\u091c\u0947\u0930 \u0932\u094d\u092f\u093e\u0909\u091b\u0947 \u0939\u094b\u0932\u093e #\u091c\u093e\u0924\u0932\u0947\u092a\u093e\u090f\u0915\u094b\u0932\u094b\u0917\u094d\u0928\u0947\u091c\u093e\u0924","to_user":"BiswasNeupane1","to_user_id":592911630,"to_user_id_str":"592911630","to_user_name":"Biswas Neupane","in_reply_to_status_id":274188530899615744,"in_reply_to_status_id_str":"274188530899615744"}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Input message: 
+INFO:root:Empty message. OUTPUT MSG: ?
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]

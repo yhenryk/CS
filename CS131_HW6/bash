@@ -1,0 +1,4 @@
+#!/bin/bash
+clear
+bash
+PATH=/usr/local/cs/bin

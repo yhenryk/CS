@@ -1,0 +1,95 @@
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1086696.665208 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <type 'exceptions.KeyError'>: '_lat'
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087013.531660 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.008,"max_id":274182394070839296,"max_id_str":"274182394070839296","next_page":"?page=2&max_id=274182394070839296&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274182394070839296&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:05:51 +0000","from_user":"tiageorgia_","from_user_id":385495787,"from_user_id_str":"385495787","from_user_name":"tia main\u263a\u263a","geo":null,"location":"on the stage","id":274182394070839296,"id_str":"274182394070839296","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2835207124\/d3e787be0bb5fa4d214bf50f67fc184b_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2835207124\/d3e787be0bb5fa4d214bf50f67fc184b_normal.jpeg","source":"&lt;a href=&quot;http:\/\/blackberry.com\/twitter&quot;&gt;Twitter for BlackBerry\u00ae&lt;\/a&gt;","text":"RT @Caggie_Dunlop: @_juliabrown she was flirting with him and I nearly pushed her down the stairs haha","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null,"in_reply_to_status_id":274169560398180353,"in_reply_to_status_id_str":"274169560398180353"},{"created_at":"Thu, 29 Nov 2012 16:05:50 +0000","from_user":"totsumal_oasm","from_user_id":569084010,"from_user_id_str":"569084010","from_user_name":"\u51f8\u4e38@\u305a\u3093\u305a\u3093\u9ad8\u4e38\uff01","geo":null,"location":"\u3061\u3087\u3082\u3089\u3093\u307e","id":274182391310999552,"id_str":"274182391310999552","iso_language_code":"ja","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2303863136\/image_normal.jpg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2303863136\/image_normal.jpg","source":"&lt;a href=&quot;http:\/\/tweetli.st\/&quot;&gt;TweetList Pro&lt;\/a&gt;","text":"\u30c9\u30f3\u30c3","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087523.839991 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087643.266662 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087747.811656 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087793.176634 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087834.744976 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1087834.744976 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1088279.602940 Blake kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1088818.407551 Gasol kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection made. 
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1088818.407551 Gasol kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Input message: AT +1088818.407551 Gasol kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection made. 
+INFO:root:Input message: WHATSAT kiwi.cs.ucla.edu 100 2
+INFO:root:Query successful. OUTPUT: {"completed_in":0.009,"max_id":274190068443389953,"max_id_str":"274190068443389953","next_page":"?page=2&max_id=274190068443389953&q=&geocode=27.5916%2C86.564%2C100km&rpp=2","page":1,"query":"","refresh_url":"?since_id=274190068443389953&q=&geocode=27.5916%2C86.564%2C100km","results":[{"created_at":"Thu, 29 Nov 2012 16:36:21 +0000","from_user":"bigyan_science","from_user_id":359289815,"from_user_id_str":"359289815","from_user_name":"Bigyan Neupane","geo":null,"location":" Kathmandu,Nepal","id":274190068443389953,"id_str":"274190068443389953","iso_language_code":"ne","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2856574134\/e39e9463c4ed8c03243db53f5fba76e4_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2856574134\/e39e9463c4ed8c03243db53f5fba76e4_normal.jpeg","source":"&lt;a href=&quot;http:\/\/mobile.twitter.com&quot;&gt;Mobile Web&lt;\/a&gt;","text":"\u0915\u093e\u0920\u092e\u093e\u0921\u094c \u0906\u090f\u092a\u091b\u093f \u0915\u094b\u0920\u093e \u0924 \u0927\u0947\u0930\u0948 \u0938\u093e\u0930\u0947 \u0915\u0948\u0932\u0947 \u0915\u0924\u093e \u0915\u0948\u0932\u0947 \u0915\u0924\u093e \u0924\u0930 \u092f\u094b \u0926\u093f\u0932 \u0938\u093e\u0930\u094d\u0928\u0947 \u092f\u094b\u091c\u0928\u093e \u0905\u091d\u0948 \u0905\u0932\u092a\u0924\u094d\u0930 \u091b\u0964:-P","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null},{"created_at":"Thu, 29 Nov 2012 16:36:20 +0000","from_user":"RepublicaNepal","from_user_id":354838265,"from_user_id_str":"354838265","from_user_name":"Republica Headline","geo":null,"location":"Kathmandu, Nepal","id":274190067579367424,"id_str":"274190067579367424","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/1494639385\/re_normal.jpg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/1494639385\/re_normal.jpg","source":"&lt;a href=&quot;http:\/\/twitterfeed.com&quot;&gt;twitterfeed&lt;\/a&gt;","text":"EU grant assistance of Rs 971m to Nepal http:\/\/t.co\/Nlj5VQBq #nepal","to_user":null,"to_user_id":0,"to_user_id_str":"0","to_user_name":null}],"results_per_page":2,"since_id":0,"since_id_str":"0"}
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+INFO:root:Connection made. 
+INFO:root:Input message: IAMAT kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+INFO:root:Processing IAMAT message. 
+INFO:root:Connection made. 
+INFO:root:Input message: AT +1117191.890839 Bryant kiwi.cs.ucla.edu +27.5916+086.5640 1353118103.108893381
+
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+INFO:root:Connection dropped: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]

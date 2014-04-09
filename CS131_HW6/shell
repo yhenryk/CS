@@ -1,0 +1,4 @@
+#!/bin/bash
+PATH=/usr/local/cs/bin
+twistd  -y ./super/server.py
+twistd -y  ./another/a.py
