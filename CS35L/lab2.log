@@ -1,0 +1,121 @@
+locale 
+/*command checks if it is in standard C or POSIX locale*/ 
+
+bash
+/*change to a shell that has the export command*/
+
+export LC_ALL='C'
+/*sets it to standard C if it isn't already*/
+
+locale 
+/*check to see that the command before worked*/
+
+scp username@lnxsrv.seas.ucla.edu:/usr/share/dict/words . | sort
+enter password
+/*copy the file words located at the path and sort it.*/
+ 
+wget http://www.cs.ucla.edu/classes/fall11/cs35L/assign/assign2.html
+/*get the html file*/
+
+cp assign2.html original.txt
+/*copy assign2.html into original.txt*/
+
+tr -c 'A-Za-z' '[\n*]' <original.txt >Example_1.txt 
+/*translates the original.txt which contains the html, replaces anything that
+is not an alphabetical character (A-Za-z) with a new line.*/
+
+tr -cs 'A-Za-z' '[\n*]' <original.txt >Example_2.txt
+/*translates the original.txt, replaces any non alphabetical character with a 
+new line. However if a character repeats itself, it is deleted. Therefore the
+output will only contain one new line and an alphabetical character.*/
+
+tr -cs 'A-Za-z' '[\n*]' <original.txt | sort >Example_3.txt
+/*tranlates the original text, replacing non alphabetical characters with a new
+line. However, if there are new lines next to each other, it will delete the 
+new lines until there is only one. Afterwards, it will sort it in alphabetical
+order.*/
+
+tr -cs 'A-Za-z' '[\n*]' <original.txt | sort -u >Example_4.txt
+/*Goes through the original text, replacing non alphabetical characters with a
+new line. If there is a repeated occurance of new lines, it will delete it 
+until there is no new lines next to each other. It will then sort it, but 
+delete words that are the same exactly. Capital letters are different from 
+lower case. */
+
+tr -cs 'A-Za-z' '[\n*] <original.txt | sort -u | comm - words > Example_5.txt
+/*Goes through the original text, replacing all non alphabetical characters 
+with a new line. If there is a new lines next to each other, delete the new 
+line till there is no new line next to each other. It will then sort it, 
+only keeping unique strings. Unique is defined by not being exactly the same,
+ex: lower case != upper case. Afterwards, it will compare it to a textfile 
+called words, if it only appeared in the first file, it will be in the first
+column, if it only appeared in the words, then it will appear in the second
+column, and if it appeared in both files, it will appear in the third column.*/
+
+tr -cs 'A-Za-z' '[\n*] <original.txt | sort -u | comm -23 - words >Example6.txt
+/*Goes through the original text, replacing all non alphabetical characters 
+with a new line. If there is a new line next to each other, it will delete the
+new line until no new line are next to each other. If will then sort it, 
+deleting strings that are exactly the same. It will only keep words that are
+not in the file words. 
+
+wget http://mauimapp.com/moolelo/hwnwdseng.htm
+/*get the english to hawaiian dictionary from the website*/
+
+cp hwnwdseng.htm hwords
+/*copy the content of hwnwdseng.htm that contains the hawaiian words into hwords*/
+~
+~
+--script---
+
+~
+~
+/*in order to run this script, you need to supply two arguments, with the first
+being the html file. It also needs to have the document words in the directory
+in order to check for english words in the hawaiian text.*/
+
+#! /bin/sh
+/*so it knows what shell to run*/
+
+cat $1 | grep "<td>" | tr -d / | sed "s/<td>//g" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/" | sed "s/"\`"/'/g" | sed "s/<u>//g" | sed "s/<br>//g" | tr -cs "A-Za-z'\-" "[\n*]" >$2
+
+/*$1 is the htm file that contains the hawaiian words we want to parce. First 
+use cat to view the file, and use grep to grab every line that contains <td> in
+it. Then delete all / with the tr since it conflicts with sed, and it is not a
+character that we need. Next replace all <td> with nothing. Change all upper 
+case letters into lower case. Change all ` into apostrophes. Delete all 
+occurance of <u> and <br>. Finally replace any character not an alphabetical 
+character, ' or - with a new line, and put the result in $2, a random file that
+needs to be in the argument.*/
+
+cat $2 | sort -u > $1
+/*Sort the content of $2 and store it in $1.*/
+
+cat $1 | tr -cs "\npk'mnwlhaeiou" '<' | sort -u > $2
+/*Take the result of the last commant, any characters that aren't /n, p, k, ', 
+m, n, w, l, h, a, e, i, o, u will be replaced with <. It will then sort it 
+deleting any duplicates and storing the result in $2.*/
+
+comm $1 $2 -12 | sort -u >hword.temp  
+/*Compare both files, and delete any of the phrases that has < in it. Sort it, 
+deleting any duplicates, and store it in hword.temp.*/
+
+comm hword.temp words -23 >hwords 
+/*Compare the hword.temp file with words, and delete any english words in 
+hword.temp. Store the result in hwords.*/ 
+
+/*for some reason, it won't recognize that both hword.temp and words both have
+who in it from what i've noticed. It did notice week though.*/
+---end of script----
+
+cat assign2.html | tr -cs 'A-Za-z' '[\n*] | sort -u | comm -23 - hwords > blah
+/*Take the file that contains the html of assign2, and delete any non
+alphabetical word and replace it with a new line. Sort it and compare it to 
+hwords, our hawaiian dictionary. It will display only the words that aren't
+in hwords.*/
+
+Words misspelled as hawaiian 
+words misspelled as english
+cat assign2.html | tr -cs 'A-Za-z' '[\n*] | sort -u | comm -hwords > blah2
+/*To see if there are any that match. All on the left colmun are english words
+mispelled as hawaiian but correct as english*/

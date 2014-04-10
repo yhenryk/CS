@@ -1,0 +1,19 @@
+Q1: With the line, it will default to long-iso format if the locales have no
+specific format tranlsation. Without it, it will default to 'pox-long-iso' if
+the locale setting are messed up.
+
+Q2: Some issues with this patch include:
+ISO has been the usual format for 4 years at least, so it might trigger bugs
+in scripts parsing ls output. Because ISO is assumed when a format translation
+is not available, for ex: en_PH or tl_PH, it gets a ISO format. It will have
+different date formats for if applied because the date format is associated 
+with the country rather than the langauge. 
+
+Q3: Raises an indexerror because seq is empty. The function random.choice 
+takes a random elemeent from a non-empty sequence. However, an emtpy file
+will have an empty sequence therefore it raises the error. The argument 
+passed into random.choise is self.lines, the lines read from the file. It is
+empty because the file is empty.
+
+Q4: When invoking with Python 3, there is an error. There is a syntax error.
+This is because Python 3 uses different syntax from Python 2.

@@ -1,0 +1,67 @@
+Lab4.txt
+
+wget ftp://alpha.gnu.org/gnu/coreutils/coreutils-8.0.tar.gz
+//get the coreutils-8.0
+
+tar -xvf coreutils-8.0.tar.gz
+//unzip the file
+
+mkdir coreutils
+//create a destination to set configure to
+
+cd coreutils-8.0
+//go to the directory that contains coreutils-8.0
+
+nano backportPatch
+//create the patch
+
+copy and paste the patch from the webpage
+//copy the patch
+
+ctrl+o: write out
+//write to the patch
+
+enter: confirm the filename
+ctrl+x: exit
+//exit
+
+patch -pNUM -b -R < backportPatch
+//apply the patch to undo what it did
+
+got errors when applying this, therefore creating a back up file because of
+the option -b, and a rej file because it failed.
+
+cd src
+vi rm.c.rej
+//look at the reject file
+
+manually change rm.c taking out lines where it says to take out.
+
+cd ..
+make
+cd src
+touch -oops a b c
+./rm *
+//check if the patch worked when manually applying it
+
+diff -u rm.c rm.orig > lab4.diff
+//create a diff file that contains the differences between the original file
+and the file that contains the implementation we desire.
+
+
+mkdir svnroot
+cd svnroot
+mkdir trunk
+mkdir branches
+mkdir tags
+cd trunk
+mkdir coresutil-8.0
+cd ~
+pwd
+svnadmin create ~/svnroot/trunk/coreutils-8.0
+svn import ~/w/ugrad.05/cs/keny/CS35L/week4/coreutils-8.0 file:///w/ugrad.05
+/cs/keny/svnroot/trunk/coresutil-8.0 -m "Initial Import"
+cd svnroot
+svn co file:///w/ugrad.05/cs/keny/svnroot/trunk/coresutil-8.0/
+svn list --verbose file:///w/ugrad.05/cs/keny/svnroot/trunk/coresutil-8.0
+

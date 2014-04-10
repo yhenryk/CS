@@ -1,0 +1,69 @@
+Week 3 Lab 
+
+wget ftp://ftp.gnu.org/gnu/coreutils/coreutils-7.6.tar.gz
+//get the tar file to extract 
+
+tar -xvf coreutils-7.6.tar.gz
+//extract the file
+
+mkdir coreutilsInstall
+//create a temporary directory to hold the executables when installing
+cd coreutils-7.6
+//go into the folder
+
+./configure --prefix=/home/henry/CS35L/coreutilsInstall
+//set the configure so it installs it in this directory.
+
+make
+
+make install
+//installs it where we set the destination at with configure.
+
+cd ..
+cd coreutilsInstall
+//change directory to where it was installed
+
+ls -l /bin/bash
+//run the command that will cause the "bug", showing a format that is 
+undesirable. 
+
+cd ..
+cd coreutils-7.6
+//change directories to where to apply patch
+
+vim NEWS
+32G jj i (insert the changes)
+//go to where the changes were in the files NEWS and manually change them.
+esc wq
+//save and exit
+
+cd src/
+VIM ls.c 
+2014G jj d 2030G j dd dd dd dd dd dd dd O (insert changes)
+//go to the lines that need to be deleted, delete them, insert lines
+esc wq
+//save and exit
+
+
+make
+//compile
+//ls.o, dir, vdir, ls
+ls, vdir, dir were executed under make because they are part of the file ls.
+ls.o was also because it is the object file of ls.
+
+vim OLD 
+esc :wq
+vim old 
+esc :wq
+
+touch -t191006072359 -m OLD
+./ls -l OLD
+./ls -l old
+
+//create test cases, making one at least one year old and then running the ls
+command in the src to see if the patch worked. 
+
+//I don't know if this was part of what they wanted, but if the file was 
+created on the same year you use ls, then it will display the time instead of
+the year. 
+

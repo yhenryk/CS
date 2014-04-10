@@ -1,0 +1,100 @@
+wget http://www.cs.ucla.edu/classes/fall11/cs35L/assign/coreutils-with-bug.tar.gz
+tar -xvf coreutils-with-bug.tar.gz
+cd coreutils-with-bug.tar.gz
+./configure
+make
+//error in making; seems to be an error involving overloading since it is 
+renaming functions; C doesn't support overloading; it has functions that
+have the same name as a program file that calls it
+
+wget http://www.cs.ucla.edu/classes/fall11/cs35L/assign/coreutils.diff
+patch -p0 < coreutils.diff
+./configure
+make
+//success in making the file after applying the rename patch
+
+cd src
+mkdir testing
+cd testing
+touch -d '1918-11-11 11:00 GMT' wwi-armistice
+touch now
+sleep 1
+touch now1
+cd ..
+./ls -lt testing
+//-lit produces a bug; even though armistice was last made; it appears on top
+
+gdb ls
+break main
+r -lt testing
+n //n till you find the function sort_files() 
+list sort_files
+enter
+//will find that it uses a switch, sort_type
+print sort_type
+//prints out sort_time
+list sort_files
+//enter till you find the case about sort_time; it has another switch; using
+//the variable, time_type
+print time_type
+//outputs time_mtime; under that case; it has a func with compare_ctime
+list compare_ctime
+under the function; it calls timespec_cmp
+quit
+y
+vi ls.c
+/timespec_cmp 
+//it is only called; there is not a definition for its function, looking at 
+//ls.c's header files; we find 2 header files related to time; exiting the
+//file editor, we find that those 2 header files aren't in the directory
+:q
+ls stat-time.h strftime.h
+cd ..
+cd lib
+ls stat-time.h strftime.h
+//we find that these header files are in this folder
+vi stat-time.h
+//looking into this header file; we are looking for the function, timespec_cmp 
+/timespec
+//we find that it is a header file
+:q
+ls timespec.h
+cp timespec.h timespec.h.orig
+vi timespec.h
+/timespec_cmp
+//looking at the functionality of this function; instead of comparing if one
+//is less than or equal to it; it subtracts the two; when it can just compare
+//change the code so it does just this
+
+cd ..
+make
+cd src
+./ls -lt testing
+//test if it does the correct behavior; in this case it does; so use it to make
+//a diff f timespec.h.orig
+cd ..
+diff -u ./lib/timespec.h.orig ./lib/timespec.h > timespec.diff
+cat ./coreutils.diff ./timespec.diff > lab5.diff
+//created the diff file; now enter in the changelog
+
+//create a vanilla coreutils-with-bugs to test this
+cd ..
+mkdir vanilla
+mv coreutils-with-bugs.tar.gz ./vanilla/
+cd vanilla
+tar -xvf coreutils-with-bugs.tar.gz
+cd coreutis-with-bugs
+cp /home/henry/coreutils-with-bug/lab5.diff ./
+patch -p0 <lab5.diff
+./configure
+make
+cd src
+mkdir testing
+cd testing
+touch -d '1918-11-11 11:00 GMT' wwi-armistice
+touch now
+sleep 1
+touch now1
+cd ..
+./ls -lt testing
+//outputs the correct result

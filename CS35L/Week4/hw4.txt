@@ -1,0 +1,65 @@
+mkdir gitroot
+//make repository directory
+
+cd gitroot
+//go into the directory
+
+/usr/local/cs/bin/git init
+//initialize it to make it a git repository directory
+
+cp -r /w/ugrad.05/cs/keny/coreutils-8.0 ./
+//copy the file we want to work on
+
+ln -s /w/ugrad.05/cs/keny/coreutils-8.0 ./
+//create a symbolic link
+
+/usr/local/cs/bin/git add coreutils-8.0
+//add the coreutils-8.0
+
+/usr/local/cs/bin/git commit -a -m "Version 1"
+//commit it
+
+/usr/local/cs/bin/git branch ver1
+//create a branch
+
+/usr/local/cs/bin/git checkout ver1
+//switch to that branch
+
+cd coreutils-8.0/
+cd src/
+//switch to the directory to apply the patch
+
+cp /w/ugrad.05/cs/keny/CS35L/week4/coreutils-8.0/src/lab4.diff ./
+patch -p0 -b <lab4.diff
+//copy the patch file made in the lab into this folder & apply the patch
+
+/usr/local/cs/bin/git commit -a -m 'Patch Applied'
+//commit it
+
+/usr/local/cs/bin/git log rm.c 
+//use the log to see the hash keys for the differences for the rm.c file
+
+/usr/local/cs/bin/git diff 5830d6e16b42392b3f8f4a1f180c0d49e5045020 
+80f18c8d598bac35ed76a750b702184cef8d81d5 > hw4.patch
+//create a diff file with git
+
+cd ..
+cd ..
+cd coreutils-8.0
+cd src 
+cp /w/ugrad.05/cs/keny/gitroot/coreutils-8.0/src/hw4.patch ./
+patch rm.c -p0 < hw.patch
+touch ./-oops a b c
+cd ..
+make
+cd src
+./rm * 
+//check if it works correctly. I could not get the gitroot to make the file so 
+i couldn't test it there.
+//edit the file for the change log
+
+cp rm.c rm.c.orig
+patch -p0 <hw4.patch
+diff -u rm.c rm.c.orig > rm.c.diff
+//verify that the command patch -p0 <hw4.patch applied to a vanilla coreutils 
+generates the modified version.

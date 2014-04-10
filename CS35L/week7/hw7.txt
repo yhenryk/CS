@@ -1,0 +1,32 @@
+Most urgent is on top.
+
+#945216 SSH CRC32 attacked detection code contains remote integer oveflow
+
+This is the most urgent because the attacker can execute arbitary code with
+the privilges of the SSH daemon, which is typically root. 
+
+#316553 Microsoft Windows TrueType font parsing vulnerability
+
+The second most urgent; the attacker may be able to run arbitary code in
+kernel mode; resulting in complete system compromise. The secondary impacts
+include, but are not limited to, installation of programs, viewing, changing,
+or deleting data; or the creation of new system accounds with full privileges.
+
+#659251 Multiple MIT KRB5 KDC daemon vulnerabilities
+
+The can crash the KDC daemon. Its not as urgent as the first two because they
+can't run arbitary code; they can only crash the KDC.
+
+#864643 SSL 3.0 and TLS 1.0 allow chosen plaintest attack in CBC modes
+
+Allows the attacker to recover potentially sensitive information. Not as urgent
+as the first two since they can only recover information. A crash is more 
+urgent as it interferes from doing anything where this; the attacker can only
+recover information.
+
+#924307 D-Link DIR-685 Xtreme N storage router WPA/WPA2 encryption failure
+
+The attacker can sniff traffic and can use the victim's internet connection
+to launch other attacks. Not as serious as the first two because they can't
+run arbitary code; or as the crash since they can only look at who is 
+connected.

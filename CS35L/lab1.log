@@ -1,0 +1,21 @@
+1. man -f <string>
+2. which gzip tr
+3. cd /usr/bin, whatis ?; [: nothing appropriate, w: show who is logged in, X: symbolic link
+to Xorg which is a server designed for Unix and Unix-like operating systems
+running Intel x86 hardware.  
+4. man cron; when it jumps forward, it runs it immediately and when it jumps
+backwards, it will avoid running the job twice.
+5. ls -l cc; gcc is actually ran.
+6. man chmod; It gives group ID on execution.
+7. man find; then using /see also to jump to commands related to find. man
+locate to confirm.
+8. man find, /-ctime n
+9. find / -ctime 3
+10. vi dummy1.txt; whereis find; cd /usr/bin; ls -l > /w/ugrad.05/cd/keny/
+dummy1.txt (where you made your text file); vi dummy1.txt; /->; there are
+284 symbolic links
+11. man ls /author; Richard Stallman David MacKenzie
+12. ls -tl
+13. man -k wh; a.which  b.whatis c. Whereis 
+14. Delete word to general buffer
+15. whereis locale

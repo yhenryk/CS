@@ -1,0 +1,107 @@
+wget http://www.cs.ucla.edu/classes/fall11/cs35L/assign/thttpd-2.25b.tar.gz
+//get thttpd
+
+tar -xvf thttpd-2.25.tar.gz
+cd thttpd-2.25b
+nano patch
+//copy the patch into this file; ctrl o, enter, ctrl x 
+patch -p0 < patch
+sed -ibak 's/getline/getline/g' extras/htpasswd.c
+./configure
+./make
+./thhtpd -p 8080
+ps aux | grep thttpd
+//go into the web browser and add more than 1024 As after http://localhost:8080
+
+./thttp -p 8080
+ps aux | grep thttpd
+//my pid is 14819
+sudo gdb
+attach 14819 
+bt
+
+#0 0xb7890424 in __kernel_vsyscall ()
+#1 0xb77adf3b in poll () from /lib/i386-linux-gnu/libc.so.6
+#2 0x08054a4d in fdwatch ()
+#3 0x0804bfa3 in main()
+
+//go into a web browser and crash the thttpd like you did before; then go back
+to gdb
+continue
+bt
+
+#0 0xb7890424 in __kernel_vsyscall ()
+#1 0xb7716e71 in raise () from /lib/i386-linux-gnu/libc.so.6
+#2 0xb771a34e in abort () from /lib/i386-linux-gnu/libc.so.6
+#3 0xb774d577 in ?? () from /lib/i386-linux-gnu/libc.so.6
+#4 0xb77d1df0 in __fortify_fail () from /lib/i386-linux-gnu/libc.so.6
+#5 0xb77d0cca in __chk_fail () from /lib/i386-linux/gnu/libc.so.6
+#6 0xb77d117d in __read_chk () from /lib/i386-linux-gnu/libc.so.6
+#7 0x0804c0c3 in main ()
+
+//5. In order to exploit this bug, you would put input until the buffer is
+full and then add in your exploit. For instance, you could add in so it would
+return to an area where you would have sudo privileges. Afterwards, you're free
+to execute commands because you're a super user. 
+
+
+make clean
+vi configure
+//go into the file and after every -O2, add an -S option. then exit.
+./configure
+make
+cp thttpd.s ~/week7/
+make clean
+vi configure
+//go into the file and after every -S that we added, add a -fno-stack-protector
+, then exit
+./configure
+make
+cp thttpd.s ~/week7/thttpd-fno-stack-protector.s
+
+diff -u thttpd.s thttpds-fno-stack-protector.s > comparison
+
+//looking at the comparison file; thttpds-fno-stack-protector.s looks more
+efficient because it has less lines of code to do the same thing then thttpd.s 
+
+diff -u thttpd.s thttpd-fno-stack-protector.s | grep + | grep call
+//This command outputs the functions that thttpd-fno-protector.s calls that 
+thttpd.s doesn't call. Replace it the + with a - if you want to see the 
+functions that thttpd.s calls that thttpd-fno-stack-protector doesn't call.
+
+make clean
+./configure
+
+//go to the Makefile and CCOPT add -fmudflap -fno-stack-protector -m32
+add -lmudflap to LDFLAGS
+make
+/thttpd -p 8080
+go into web browser; put http://localhost:8080 in the url; to check if it
+worked
+ps aux | grep thttpd
+my pid is 4852
+sudo gdb
+attach 4852
+
+Attaching to process 4852
+/home/henry/week7/thttpd-2.25b/thttpd (deleted): No such file or directory.
+(gdb) bt
+#0  0xb76fa424 in ?? ()
+#1  0x08054a4d in ?? ()
+#2  0x0804bfa3 in ?? ()
+#3  0xb756ce37 in ?? ()
+#4  0x08049a91 in ?? ()
+ 
+tried to crash it but it didn't work; got a 404 on the browser instead
+
+
+//to generate the assembly code;
+make clean
+//vi Makefile, hopefully it will look like the previous makefile; if it
+doesn't; then add what we added before to make mudflap work; then before 
+-fmudflap; add a -S under CCOPT
+
+cp thttpd.s ~/week7/thttpd-fmudflap.s
+diff -u thttpd.s thttpd-fmudflap.s > comparison
+//thttpd.s looks more efficient because it has less code. When you look at
+the files; thttpd-fmudflap.s has more instructions. 

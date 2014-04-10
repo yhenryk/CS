@@ -1,0 +1,62 @@
+vi catb.c
+
+#include <stdio.h>
+
+int main()
+{
+  char c = getchar();
+  while(c != EOF)
+  {
+    putchar(c);
+    c = getchar();
+  }
+}
+//this code uses getchar to take from stdin until it encounters an EOF and
+outputs what was inputed. In order to get out of stdin when running this
+program from the command line, use ctrl+D.
+
+:q
+vi catu.c
+
+#include <unistd.h>
+
+int main()
+{
+  char ch;
+  while(read(0,&ch, 1))
+  {
+    write(1, &ch, 1);
+  }
+}
+
+//same function as catb.c but uses the read and write function.
+
+gcc -o catb.o catb.c
+gcc -o catu.o catu.c
+//compile the c files into binary files
+
+wget http://cs.ucla.edu/~chenliu/cs35l/lecture11/bigfile.txt
+//get a file that is at least 5mb in size
+
+strace -o catb-output.txt ./catb.o < bigfile.txt 
+strace -o catu-output.txt ./catu.o < bigfile.txt
+//use strace to get all the system calls when inputing a file that is
+at least 5 mb in size.
+//catu is slower; it has more system calls
+
+strace -o catbcopy-output.txt ./catb.o < bigfile.txt >copy.txt
+strace -o catucopy-output.txt ./catu.o < bigfile.txt >copy.txt
+//same as above result; catu has more system calls
+
+time ./catb.o <bigfile.txt
+//0.329u 0.074s 0:06.17 6.3%
+time ./catu.o <bigfile.txt 
+//2.229u 9.106s 1:21.30 14%
+
+//where u = user, s = system, and the last is real time.
+//real time is the total time it takes to run from start to finish
+//user is the amount of CPU time spent in the user-mode code(outside the
+//kernel) within the process
+//sys is the amount of CPU time spent in the kernel within the process.
+//catu takes long to run
+

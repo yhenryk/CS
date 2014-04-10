@@ -1,0 +1,41 @@
+My original binsortu.c used a bubble sort in a single array. I decided to 
+change its implementation to use qsort and to be in an array of char pointers.
+This way, the difference between binsortu.c and binsortuu.c would mostly be on
+how it gets char from stdin and how it writes it to stdout.
+
+a.out = binsortu.c
+run.o = binsortuu.c
+
+time ./a.out 5 < bigfile.txt
+0.109u .001s 0:00.11 
+
+time ./run.o 5 < bigfile.txt
+0.757u 1.617s 0:02.37
+
+time ./a.out 5
+Henry
+0.000u 0.000s 0:02.02 
+
+time ./run.o 5 
+Henry
+0.000u 0.000s 0:02.55
+
+time ./a.out 5 < /proc/self/maps
+0.000u 0.000s 0:00.00
+
+time ./run.o 5 < /procs/self/maps
+0.001u 0.000s 0:00.00
+
+time ./a.out 100 < a6bigfile
+53.3287u 0.309s 0:57.46 
+
+time ./run.o 100 < a6bigfile
+53.762u 2.119s 1:00.01 93.2%
+
+Overall, run.o runs slower than a.out especially if the file size is bigger.
+This is expected because run.o calls a system function while a.out just
+uses getchar(). A system call is a more expensive call than a library call
+because it requires the OS to take over. 
+Estimated number of comparisons as a function of number of inputs lines:
+
+number of comparions = input(log(input))

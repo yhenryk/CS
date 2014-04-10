@@ -1,0 +1,54 @@
+1. By using man man, a manual page containing all the options of man appears. 
+By searching for an option that fits the description for the question, -k
+seems to fit it best after man apropos to see what it did. 
+
+2. First by using man -k locate, I read through the description that it 
+provides for the commands, and chose to try out which. After using it, I went
+to the file to check if it was correct.
+
+3. From lecture we learned how to use ? and *. I started off by using whereis
+ls and whereis cd and whereis man to see where these commands were located at.
+Afterwards i went to the directories and use ls ? to see the commands that
+were 1 character long. By using whatis ? it gave me a short description of 
+some of them. However 2 of them were missing, so i looked at ls ? -l to see
+if any were symbolic links. Since i knew what it was linked to, i manned that
+instead.   
+
+4. Using man cron and then /Daylight, it jumps to the section about Daylight
+Saving Time.
+
+5. Going to the location and then using the command ls -l cc, you see at the
+end cc -> gcc. Because cc is a symbolic link, gcc is actually being ran.
+
+6. Using man chmod and searching for s, I found a sentence that ended with
+(s). Because of the lecture, I already knew that g meant group. You could
+search for g in the manual and find that it means group.
+
+7. Using man find, and going to see Also, it specifies commands that are
+related to find. Because of lecture i knew that locate does the same thing
+as find but faster. Using man locate i confirm this.
+
+8. Using man find again, i read through the options till i found -ctime n,
+which states it finds a File lass accessed n*24 hours ago.
+
+9. Using the command find / -ctime 3
+
+10. Create a file using vi/vim/emacs, then use whereis find to find where
+find is. cd to there and use ls -l > where your file is, to store the 
+content into a file since there is too much information to see it in a
+screen. Access the file and /-> to highlight all rows that contain a 
+symbolic file.
+ 
+11. Using the man ls and then searching author 
+
+12. Using man ls and then /time i found a way to sort the files by their
+time. It just happened that the earliest was on the bottom so i didn't have
+to use -r to reverse the order.
+
+13. Using man -k wh i got a list of commands that had wh in it. Looking at
+each command starting with wh i found the ones that matched the description.
+
+14. It is one the vim cheat sheet. Also by trying out vim, typing in words
+and using dw you can see wht it does.
+
+15. Using whereis locale, you can see all the files associated with locale. 
