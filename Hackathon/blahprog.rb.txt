@@ -1,0 +1,11 @@
+require 'nokogiri'
+require 'open-uri'
+
+def parser(url)
+	temp = url
+	doc = Nokogiri::HTML(open(temp))
+	text = doc.css("td.menugridcell")
+	puts text.css("li")[0].text
+	end
+
+parser("http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F20%2F2012&meal=2&threshold=2")

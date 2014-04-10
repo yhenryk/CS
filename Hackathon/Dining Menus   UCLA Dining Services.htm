@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- FIELDFILT.ASP, Version 2.3.0  -->
+<!-- End of Aurora Information Systems Required Text -->
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- NAUSERDATA.ASP, Version 2.3.2  -->
+<!-- End of Aurora Information Systems Required Text --> 
+
+<html>
+	<head>
+		<title>Dining Menus | UCLA Dining Services</title>
+		
+		<script type="application/javascript" src="http://m.ucla.edu/assets/redirect/js.php?m=http://m.dining.ucla.edu/menu/index.cfm?restaurantType=Residential"></script>
+		
+		<link rel="stylesheet" href="/lib/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+		
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/menu.css" />
+		
+		<script type="text/javascript" src="/lib/jquery/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="/lib/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<script type="text/javascript" src="/lib/tooltip/jquery.tools.min.js"></script>
+		
+		<script type="text/javascript" src="js/controls.js"></script>
+		<script type="text/javascript" src="js/menu.js"></script>
+		<script type="text/javascript" src="js/recipebox.js"></script>
+		<script type="text/javascript" src="js/tooltip.js"></script>
+		
+		<script language="javascript">
+		
+			
+			recipeInfo["400262"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["400237"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["042247"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["042246"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["400203"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["177044"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["400082"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["400236"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["161006"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["400487"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["400124"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["400139"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["163008"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["175037"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["175144"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["175146"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["175155"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["175143"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["140001"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["213000"] = "Moist and rich chocolate cupcakes topped with a swirl of vanilla icing.";
+			recipeInfo["182144"] = "A campfire favorite of a baked mixture of crumbly and lightly sweetened graham cracker crumbs, mini marshmallows, and semi-sweet chocolate chips.\n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["181184"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["185026"] = "A tangy key lime pie flavored with fresh lime juice and sweetened with condensed milk.";
+			recipeInfo["185011"] = "A delightful slice of pie filled with juicy and naturally sweet peaches.";
+			recipeInfo["160023"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["999014"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["161015"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["999015"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["161059"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["500032"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["175053"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["212083"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["029080"] = "<i>Kakitamajiru</i>&nbsp;|&nbsp;Japan<br />Sliced shiitake mushrooms, sliced onions, and chopped green onions simmered in a dashi broth with graceful strands of beaten egg.";
+			recipeInfo["029086"] = "China<br />Fresh, emerald green spinach leaves cooked with soft tofu in a rich chicken and pork broth.";
+			recipeInfo["046035"] = "<i>Huanseng Mi</i>&nbsp;|&nbsp;China<br />Whole roasted peanuts wok-tossed with star anise, sugar, szechuan peppercorns, and sesame oil. Tossed lightly with kosher salt.";
+			recipeInfo["145053"] = "<i>Nasu no Miso Dengaku</i>&nbsp;|&nbsp;Japan<br />Fresh quartered eggplant steamed until tender, then glazed with a blend of white and red miso paste, mirin, sake, and seaweed soup stock. Served over sticky rice with julienned cucumbers. \n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["226043"] = "<i>Tsukemono</i>&nbsp;|&nbsp;Japan<br />Pickled slices of cucumber.";
+			recipeInfo["226040"] = "Japan<br />Slices of flavorful, seasoned daikon.";
+			recipeInfo["226044"] = "China<br />Crunchy salted vegetables seasoned with chili peppers.";
+			recipeInfo["145144"] = "<i>Goma-ae</i>&nbsp;|&nbsp;Japan<br />Fresh baby spinach tossed with lite soy sauce and roasted sesame seeds.\n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["127085"] = "<i>Xue Dou Xia</i>&nbsp;|&nbsp;China<br />Marinated shrimp wok-tossed with ginger, garlic, snow peas, water chestnuts, carrots, bell peppers, and scallions. Flavored with a sauce of chicken broth, wine, oyster sauce, sugar, and pepper.";
+			recipeInfo["500166"] = "<i>Hom Mali</i>&nbsp;|&nbsp;Thailand<br />Fluffy and fragrant Thai jasmine rice with a subtle nutty aroma and flavor.\n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["145204"] = "<i>Jiang Doufu Fan Chao</i>&nbsp;|&nbsp;China<br />Marinated tofu lightly fried, then wok-tossed with garlic, ginger, shiitake mushrooms, and bamboo shoots in a savory sauce. Seasoned with ginger and served over steamed rice.\n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["127097"] = "<i>Hotategai Dainamaito</i>&nbsp;|&nbsp;Japan<br />Tender scallops lightly fried and baked with a topping of creamy, spicy Sriracha mayonnaise, water chestnuts, flying fish roe, and sesame seeds.";
+			recipeInfo["163038"] = "<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/VG.png\" alt=\"Vegan\">&nbsp;Vegan</div>\n";
+			recipeInfo["145061"] = "<i>Tofu Katsu</i>&nbsp;|&nbsp;Japan<br />Slices of fresh tofu simply seasoned in salt and pepper, coated in egg batter and Panko bread crumbs, then fried to a golden brown crisp. Drizzled with katsu sauce.\n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["111736"] = "<i>Tori Katsu Kare</i>&nbsp;|&nbsp;Japan<br />Japanese curry sauce evenly spread over crispy flatbread and topped with fresh chicken. Garnished with chopped green onions.";
+			recipeInfo["999049"] = "<i>Shu Cai Za Sui</i>&nbsp;|&nbsp;China<br />Diced bell peppers, onions, crunchy snap peas, bean sprouts and shredded carrots. Served on crispy flatbread lightly spread with a sweet and salty sauce.\n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["087004"] = "<i>Char Siu Bao</i>&nbsp;|&nbsp;China<br />A fluffy Chinese bao bun filled with  savory, marinated pork flavored with garlic, ginger, hoisin sauce, and sesame oil.";
+			recipeInfo["111805"] = "<i>Xiang Cui Pi Ji San Ming Zhi</i>&nbsp;|&nbsp;China<br />Tender and crispy, golden-fried chicken tossed with garlic and scallions, then served over a toasted bun. Topped with refreshing cucumber and shallot salad.";
+			recipeInfo["167147"] = "<i>Furikake Furaido Poteto</i>&nbsp;|&nbsp;Japan<br />Crispy fries tossed with a mixture of toasted sesame seeds and nori seaweed.\n<hr class=\"ttspacer\" />\n<div class=\"ttlegend\"><img class=\"webcode\" src=\"images/webcodes/V.png\" alt=\"Vegetarian\">&nbsp;Vegetarian</div>\n";
+			recipeInfo["188538"] = "<i>Gajar Ka Halwa</i>&nbsp;|&nbsp;India<br />A sweet pudding made with julienned carrots simmered in milk and then cooked with Indian clarified butter. Mixed with sliced pistachios and cashews.";
+			recipeInfo["188617"] = "<i>Chokoretto to Kare Musu</i>&nbsp;|&nbsp;Japan<br />A sweet and savory combination of rich, creamy chocolate mousse accented with a subtle Japanese curry flavor.";
+			recipeInfo["236016"] = "<i>Juhua Cha</i>&nbsp;|&nbsp;China<br />A light tea brewed from chrysanthemum flowers and flavored with a dash of sugar.";
+
+		
+		</script>
+	</head>
+	
+	<body>
+		
+		<div class="hdr">
+			<table class="hdrtable">
+				<tr>
+					<td>
+						<a href="http://map.ais.ucla.edu/portal/site/UCLA/menuitem.3f8e7342ad4ca217b66d4ab4f848344a/?vgnextoid=6faa0437793d1010VgnVCM1000008f8443a4RCRD"><img src="images/ds_logo.png"></a>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td class="hdrchunk" valign="middle">
+									<ul class="hdrlist">
+										<li><a href="http://map.ais.ucla.edu/portal/site/UCLA/menuitem.3f8e7342ad4ca217b66d4ab4f848344a/?vgnextoid=6faa0437793d1010VgnVCM1000008f8443a4RCRD">Dining Home</a></li>
+										<li><a href="http://map.ais.ucla.edu/portal/site/UCLA/menuitem.789d0eb6c76e7ef0d66b02ddf848344a/?vgnextoid=8d32064a9a7d1010VgnVCM1000008f8443a4RCRD">Our Facilities</a></li>
+										<li><a href="http://map.ais.ucla.edu/portal/site/UCLA/menuitem.789d0eb6c76e7ef0d66b02ddf848344a/?vgnextoid=5268345c6f842110VgnVCM100000dcd76180RCRD">Hours of Operation</a></li>
+										<li><a href="default.asp">Today's Entrées</a></li>
+									</ul>
+								</td>
+								<td class="hdrchunk" valign="middle">
+									<ul class="hdrlist">
+										<li><a href="http://menu.ha.ucla.edu/foodpro/old/diningmenus.asp?strCurLocation=13&strCurLocationName=Bruin+Cafe">Bruin Café Menu</a></li>
+										<li><a href="http://menu.ha.ucla.edu/foodpro/old/diningmenus.asp?strCurLocation=08&strCurLocationName=Cafe+1919">Café 1919 Menu</a></li>
+										<li><a href="http://menu.ha.ucla.edu/foodpro/old/diningmenus.asp?strCurLocation=05&strCurLocationName=De+Neve+Late+Night+%2F+My+Pizza">De Neve Late Night Menu</a></li>
+										<li><a href="http://menu.ha.ucla.edu/foodpro/old/diningmenus.asp?strCurLocation=03&strCurLocationName=Rendezvous">Rendezvous Menu</a></li>
+									</ul>
+								<td class="hdrchunk" valign="middle">
+									<ul class="hdrlist">
+										<li><a href="https://shib.hhs.ucla.edu/mypizza/index.cfm">Mypizza & Wings</a></li>
+										<li><a href="https://secure4.ha.ucla.edu/bearhugs/index.cfm">Bear Hugs</a></li>
+										<li><a href="http://map.ais.ucla.edu/portal/site/UCLA/menuitem.789d0eb6c76e7ef0d66b02ddf848344a/?vgnextoid=aba2ba7f5d9fb210VgnVCM100000e1d76180RCRD">Nutrition Education</a></li>
+										<li><a href="http://m.dining.ucla.edu">Dining Mobile Site</a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+			
+
+		
+		
+		
+		<div class="midnav">
+			<span class="midnavbreadcrumb"><a href="default.asp">Today's Menu</a>&nbsp;&gt;&nbsp;Lunch</span>
+			
+			
+
+			<div class="midnavcontrols">
+				<form name="searchform" action="search.asp" method="post">
+				
+					<a id="filterlink" href="filter.asp">Configure Menu Filters</a>&nbsp;
+					
+					<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+						<!-- allergenfilterinc.asp, Version 2.3.3  -->
+					<!-- End of Aurora Information Systems Required Text --> 
+				
+					<select name="dateselect" id="dateselect" onChange="window.location = this.options[this.selectedIndex].value">
+						<option value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F20%2F2012&meal=2&threshold=2">Jump to Date...</option>
+												<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F19%2F2012&meal=2&threshold=2">Yesterday, April 19</option>
+						<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F20%2F2012&meal=2&threshold=2">Today, April 20</option>
+						<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F21%2F2012&meal=2&threshold=2">Tomorrow, April 21</option>
+						<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F22%2F2012&meal=2&threshold=2">Sunday, April 22</option>
+						<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F23%2F2012&meal=2&threshold=2">Monday, April 23</option>
+						<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F24%2F2012&meal=2&threshold=2">Tuesday, April 24</option>
+						<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F25%2F2012&meal=2&threshold=2">Wednesday, April 25</option>
+						<option Value="http://menu.ha.ucla.edu/foodpro/default.asp?date=4%2F26%2F2012&meal=2&threshold=2">Thursday, April 26</option>
+
+					</select>
+		
+					<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+						<!-- date.asp, Version 2.3.0  -->
+					<!-- End of Aurora Information Systems Required Text --> 
+			
+
+					<input class="searchboxblurred" id="searchbox" type="text" name="search" value="Menu Search" onFocus="SearchFocus()" onBlur="SearchBlur()" />
+					<input class="midnavbutton" type="image" src="images/search.png" />
+				</form>
+			</div>
+				
+
+				
+			<hr class="clearall" />
+		</div>
+		
+		<div id="tooltip">&nbsp;</div>
+		
+		&nbsp;
+		
+		<div id="menuwrapper">
+
+			<div align="center" class="menucontent">
+				<table class="menugridtable" cellspacing="0">
+					<tr>
+						<td class="menumealheader" colspan="3">
+							Lunch Menu for Today, April 20, 2012
+						</td>					</tr>
+					<tr>
+						<td class="menulocheader"><a class="menuloclink" href="default.asp?location=07&date=4%2F20%2F2012">Covel</a></td>
+						<td class="menulocheader"><a class="menuloclink" href="default.asp?location=01&date=4%2F20%2F2012">De Neve</a></td>
+						<td class="menulocheader"><a class="menuloclink" href="default.asp?location=04&date=4%2F20%2F2012">FEAST at Rieber</a></td>
+					</tr>
+					<tr>
+						<td class="menunutritionlink"><a href="nutritiveanalysis.asp?location=07&date=4%2F20%2F2012&meal=2">Nutritive Analysis</a></td>
+						<td class="menunutritionlink"><a href="nutritiveanalysis.asp?location=01&date=4%2F20%2F2012&meal=2">Nutritive Analysis</a></td>
+						<td class="menunutritionlink"><a href="nutritiveanalysis.asp?location=04&date=4%2F20%2F2012&meal=2">Nutritive Analysis</a></td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category4">Soups</li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400262&PortionSize=4" onmouseover="SetRecDesc('400262');">Lentil Soup</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400237&PortionSize=4&bgcolor=0F0F0F" onmouseover="SetRecDesc('400237');">Minestrone Soup..</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=400241&PortionSize=6" onmouseover="SetRecDesc('400241');">New England Clam Chowder</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category4">Soups</li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=027047&PortionSize=6" onmouseover="SetRecDesc('027047');">Fisherman's Stew</a></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400262&PortionSize=6" onmouseover="SetRecDesc('400262');">Lentil Soup</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category4">Soups</li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=029080&PortionSize=6" onmouseover="SetRecDesc('029080');">Egg Drop Soup</a></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=029086&PortionSize=6" onmouseover="SetRecDesc('029086');">Emerald & White Jade Soup</a></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Prepared Salads</li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=042247&PortionSize=3" onmouseover="SetRecDesc('042247');">Cilantro Slaw</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=042246&PortionSize=3" onmouseover="SetRecDesc('042246');">Jicama, Cucumber & Chile Slaw</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=123023&PortionSize=3" onmouseover="SetRecDesc('123023');">Mixed Seafood Ceviche</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Prepared Salads</li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=042247&PortionSize=3" onmouseover="SetRecDesc('042247');">Cilantro Slaw</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=042246&PortionSize=3" onmouseover="SetRecDesc('042246');">Jicama, Cucumber & Chile Slaw</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=121199&PortionSize=3" onmouseover="SetRecDesc('121199');">Krab & Scallop Ceviche</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Prepared Salads</li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=046035&PortionSize=1" onmouseover="SetRecDesc('046035');">Fried Peanuts</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=145053&PortionSize=1" onmouseover="SetRecDesc('145053');">Miso-Braised Eggplant</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=226043&PortionSize=1" onmouseover="SetRecDesc('226043');">Pickled Cucumbers</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=226040&PortionSize=1" onmouseover="SetRecDesc('226040');">Seasoned Daikon</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=226044&PortionSize=1" onmouseover="SetRecDesc('226044');">Spicy Salted Vegetables</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=145144&PortionSize=1" onmouseover="SetRecDesc('145144');">Spinach w/ Sesame Seeds</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Exhibition Kitchen</li>
+								<li class="level5"><a class="itemlink" href="recipedetail.asp?RecipeNumber=999071&PortionSize=1" onmouseover="SetRecDesc('999071');">Chicken Tuscany Pasta</a></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=211075&PortionSize=1" onmouseover="SetRecDesc('211075');">Foccacia</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Exhibition Kitchen</li>
+								<li class="level5"><a class="itemlink" href="recipedetail.asp?RecipeNumber=111167&PortionSize=4" onmouseover="SetRecDesc('111167');">Chicken Loco Bowl</a></li>
+								<li class="level3">w/&nbsp;<a class="itemlinkt" href="recipedetail.asp?RecipeNumber=160023&PortionSize=1" onmouseover="SetRecDesc('160023');">Flour Tortilla</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=999014&PortionSize=1" onmouseover="SetRecDesc('999014');">Vegan Chicken Loco Bowl</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level3">w/&nbsp;<a class="itemlinkt" href="recipedetail.asp?RecipeNumber=160023&PortionSize=1" onmouseover="SetRecDesc('160023');">Flour Tortilla</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Big Bowl</li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=127085&PortionSize=3" onmouseover="SetRecDesc('127085');">Shrimp With Snow Peas</a></li>
+								<li class="level3">w/&nbsp;<a class="itemlinkt" href="recipedetail.asp?RecipeNumber=500166&PortionSize=2&bgcolor=0F0F0F" onmouseover="SetRecDesc('500166');">Jasmine Rice</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=145204&PortionSize=3" onmouseover="SetRecDesc('145204');">Ginger Tofu Stir Fry</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level3">w/&nbsp;<a class="itemlinkt" href="recipedetail.asp?RecipeNumber=500166&PortionSize=2&bgcolor=0F0F0F" onmouseover="SetRecDesc('500166');">Jasmine Rice</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Euro Kitchen</li>
+								<li class="level5"><a class="itemlink" href="recipedetail.asp?RecipeNumber=111079&PortionSize=1" onmouseover="SetRecDesc('111079');">BBQ Chicken</a></li>
+								<li class="level3">w/&nbsp;<a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400203&PortionSize=1" onmouseover="SetRecDesc('400203');">Jalapeno Cornbread</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level3">&amp;&nbsp;&nbsp;<a class="itemlink" href="recipedetail.asp?RecipeNumber=163057&PortionSize=2" onmouseover="SetRecDesc('163057');">Seasoned Rice</a></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=177044&PortionSize=3" onmouseover="SetRecDesc('177044');">Roasted Vegetable Mix</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Euro Kitchen</li>
+								<li class="level5"><a class="itemlink" href="recipedetail.asp?RecipeNumber=121034&PortionSize=4" onmouseover="SetRecDesc('121034');">Fried Beer-Battered Pollock</a></li>
+								<li class="level3">w/&nbsp;<a class="itemlinkt" href="recipedetail.asp?RecipeNumber=161015&PortionSize=2" onmouseover="SetRecDesc('161015');">Steak Cut Fries</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level3">&amp;&nbsp;&nbsp;<a class="itemlink" href="recipedetail.asp?RecipeNumber=157001&PortionSize=1" onmouseover="SetRecDesc('157001');">Tartar Sauce</a></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=999015&PortionSize=1" onmouseover="SetRecDesc('999015');">BBQ Vegan Chicken Tostada</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Spice Kitchen</li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=127097&PortionSize=2" onmouseover="SetRecDesc('127097');">Dynamite Scallops</a></li>
+								<li class="level3">w/&nbsp;<a class="itemlinkt" href="recipedetail.asp?RecipeNumber=163038&PortionSize=1" onmouseover="SetRecDesc('163038');">Short Grained Rice</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=145061&PortionSize=1" onmouseover="SetRecDesc('145061');">Fried Tofu Cutlet</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Pizza Oven</li>
+								<li class="level5"><a class="itemlink" href="recipedetail.asp?RecipeNumber=141003&PortionSize=1/10" onmouseover="SetRecDesc('141003');">Smoked Chicken & Pesto Pizza</a></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400082&PortionSize=1/10" onmouseover="SetRecDesc('400082');">Cheese Pizza</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=400449&PortionSize=1/10&bgcolor=0F0F0F" onmouseover="SetRecDesc('400449');">Pepperoni Pizza</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Pizza Oven</li>
+								<li class="level5"><a class="itemlink" href="recipedetail.asp?RecipeNumber=141030&PortionSize=1/10" onmouseover="SetRecDesc('141030');">BBQ Chicken Pizza</a></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400082&PortionSize=1/10" onmouseover="SetRecDesc('400082');">Cheese Pizza</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=400449&PortionSize=1/10&bgcolor=0F0F0F" onmouseover="SetRecDesc('400449');">Pepperoni Pizza</a></li>
+								<li class="level5"><a class="itemlink" href="recipedetail.asp?RecipeNumber=999016&PortionSize=1" onmouseover="SetRecDesc('999016');">Mexican Beef Baked Pasta</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Stone Oven</li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=111736&PortionSize=1" onmouseover="SetRecDesc('111736');">Fried Chicken Cutlet Curry Flatbread</a></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=999049&PortionSize=1" onmouseover="SetRecDesc('999049');">Vegetable Chop Suey Flatbread</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category4">Grill</li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400236&PortionSize=4" onmouseover="SetRecDesc('400236');">Cream of Tomato Soup</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=161006&PortionSize=3" onmouseover="SetRecDesc('161006');">French Fries</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400487&PortionSize=1" onmouseover="SetRecDesc('400487');">Grilled Cheese Sandwich</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400124&PortionSize=1" onmouseover="SetRecDesc('400124');">Veggie Burger</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400139&PortionSize=1" onmouseover="SetRecDesc('400139');">Veggie Patty</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=400316&PortionSize=1" onmouseover="SetRecDesc('400316');">Bruin Burger</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=400317&PortionSize=1" onmouseover="SetRecDesc('400317');">Bruin Cheeseburger</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=117018&PortionSize=1" onmouseover="SetRecDesc('117018');">Chicken Breast Sandwich</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=111252&PortionSize=1" onmouseover="SetRecDesc('111252');">Grilled Chicken Breast</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=071914&PortionSize=1" onmouseover="SetRecDesc('071914');">Hot Dog w/ Bun</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category4">Grill</li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400487&PortionSize=1" onmouseover="SetRecDesc('400487');">Grilled Cheese Sandwich</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=161059&PortionSize=3" onmouseover="SetRecDesc('161059');">Krinkle Cut Fries</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400124&PortionSize=1" onmouseover="SetRecDesc('400124');">Veggie Burger</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=400139&PortionSize=1" onmouseover="SetRecDesc('400139');">Veggie Patty</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=400316&PortionSize=1" onmouseover="SetRecDesc('400316');">Bruin Burger</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=400317&PortionSize=1" onmouseover="SetRecDesc('400317');">Bruin Cheeseburger</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=117110&PortionSize=1" onmouseover="SetRecDesc('117110');">Buffalo Chicken Breast Sandwich</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=111253&PortionSize=1" onmouseover="SetRecDesc('111253');">Grilled Chicken Breast</a></li>
+								<li class="level4"><a class="itemlink" href="recipedetail.asp?RecipeNumber=071914&PortionSize=1" onmouseover="SetRecDesc('071914');">Hot Dog w/ Bun</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category5">Iron Grill</li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=087004&PortionSize=1" onmouseover="SetRecDesc('087004');">BBQ Roast Pork Bao</a></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=111805&PortionSize=1" onmouseover="SetRecDesc('111805');">Chinese Fried Chicken Sandwich</a></li>
+								<li class="level5"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=167147&PortionSize=2" onmouseover="SetRecDesc('167147');">Ao Nori Fries</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Hot Food Bar</li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=163008&PortionSize=3" onmouseover="SetRecDesc('163008');">Brown Rice</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=175037&PortionSize=3" onmouseover="SetRecDesc('175037');">Fresh Steamed Carrots</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=175144&PortionSize=1" onmouseover="SetRecDesc('175144');">Grilled Crookneck Squash</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=175146&PortionSize=1" onmouseover="SetRecDesc('175146');">Grilled Green Peppers</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=175155&PortionSize=1" onmouseover="SetRecDesc('175155');">Grilled Mushroom</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=175143&PortionSize=1" onmouseover="SetRecDesc('175143');">Grilled Zucchini</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=163003&PortionSize=3" onmouseover="SetRecDesc('163003');">Mushroom Almond Rice</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=140001&PortionSize=1" onmouseover="SetRecDesc('140001');">Sesame Marinated Grilled Tofu</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Hot Food Bar</li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=163008&PortionSize=3" onmouseover="SetRecDesc('163008');">Brown Rice</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=500032&PortionSize=3" onmouseover="SetRecDesc('500032');">Lemon & Herbs Orzo</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=175053&PortionSize=3" onmouseover="SetRecDesc('175053');">Southwest Vegetable Saute</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=212083&PortionSize=1" onmouseover="SetRecDesc('212083');">Vienna Dinner Roll</a>&nbsp;<img class="webcode" src="images/webcodes/VG.png" alt="Vegan"></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+								<span class="category0">&nbsp;</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Desserts & Granary</li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=183002&PortionSize=1" onmouseover="SetRecDesc('183002');">Apple Crisp</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=213000&PortionSize=1" onmouseover="SetRecDesc('213000');">Chocolate Cupcake</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=182144&PortionSize=1" onmouseover="SetRecDesc('182144');">Deep Dish S'Mores</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=181184&PortionSize=1" onmouseover="SetRecDesc('181184');">German Chocolate Cake</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=185026&PortionSize=1" onmouseover="SetRecDesc('185026');">Key Lime Pie</a></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=189083&PortionSize=1" onmouseover="SetRecDesc('189083');">Linzer Bar</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=185011&PortionSize=1" onmouseover="SetRecDesc('185011');">Peach Pie</a></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=186032&PortionSize=2" onmouseover="SetRecDesc('186032');">Strawberry Mousse</a></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=182096&PortionSize=2" onmouseover="SetRecDesc('182096');">White Choc Chip Cookies</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Desserts & Granary</li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=183002&PortionSize=1" onmouseover="SetRecDesc('183002');">Apple Crisp</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=213000&PortionSize=1" onmouseover="SetRecDesc('213000');">Chocolate Cupcake</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=182144&PortionSize=1" onmouseover="SetRecDesc('182144');">Deep Dish S'Mores</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=181184&PortionSize=1" onmouseover="SetRecDesc('181184');">German Chocolate Cake</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=185026&PortionSize=1" onmouseover="SetRecDesc('185026');">Key Lime Pie</a></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=189083&PortionSize=1" onmouseover="SetRecDesc('189083');">Linzer Bar</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=185011&PortionSize=1" onmouseover="SetRecDesc('185011');">Peach Pie</a></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=186032&PortionSize=2" onmouseover="SetRecDesc('186032');">Strawberry Mousse</a></li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=182096&PortionSize=2" onmouseover="SetRecDesc('182096');">White Choc Chip Cookies</a></li>
+							</ul>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category2">Sweets</li>
+								<li class="level2"><a class="itemlink" href="recipedetail.asp?RecipeNumber=183002&PortionSize=1" onmouseover="SetRecDesc('183002');">Apple Crisp</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=213000&PortionSize=1" onmouseover="SetRecDesc('213000');">Chocolate Cupcake</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=182144&PortionSize=1" onmouseover="SetRecDesc('182144');">Deep Dish S'Mores</a>&nbsp;<img class="webcode" src="images/webcodes/V.png" alt="Vegetarian"></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=185026&PortionSize=1" onmouseover="SetRecDesc('185026');">Key Lime Pie</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=185011&PortionSize=1" onmouseover="SetRecDesc('185011');">Peach Pie</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=188538&PortionSize=1" onmouseover="SetRecDesc('188538');">Carrot Halwa</a></li>
+								<li class="level2"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=188617&PortionSize=3" onmouseover="SetRecDesc('188617');">Japanese Chocolate Curry Mousse</a></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="menugridcell">
+								<span class="category0">&nbsp;</span>
+						</td>
+						<td class="menugridcell">
+								<span class="category0">&nbsp;</span>
+						</td>
+						<td class="menugridcell">
+							<ul>
+								<li class="category4">Specialty Drinks</li>
+								<li class="level4"><a class="itemlinkt" href="recipedetail.asp?RecipeNumber=236016&PortionSize=6" onmouseover="SetRecDesc('236016');">Chrysanthemum Tea</a></li>
+							</ul>
+						</td>
+					</tr>
+			</table>
+			</div>
+<br />
+
+			<div id="legendbox">
+				<div id="legendheader">Legend</div>
+				<div class="legenditem1"><img class="webcode" src="images/webcodes/VG.png" />&nbsp;Vegan</div>
+				<div class="legenditem2"><img class="webcode" src="images/webcodes/V.png" />&nbsp;Vegetarian</div>
+			</div>
+
+			<span class="changedisclaimer">Menus are subject to change based on operational needs.</span>
+
+			<!-- The following is required by Aurora Information Systems -- DO NOT MODIFY OR REMOVE -->
+			<br />
+			<div class="poweredbyfoodpro">Powered by FoodPro<sup>&#174;</sup>&nbsp;</div>
+			<!-- End of Aurora Information Systems Required Text -->
+		</div>
+	</body>
+</html>
+
+
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- SHORTMENU.ASP, Version 2.3.3  -->
+<!-- End of Aurora Information Systems Required Text --> 
